@@ -749,9 +749,17 @@ a.chip:active { transform: scale(.97); }
 .pre-footer .btn--gold { background: var(--navy-900); color: var(--on-dark); }
 .pre-footer .btn--gold::before { background: var(--blue-600); }
 @media (hover: hover) and (pointer: fine) { .pre-footer .btn--gold:hover { color: var(--on-dark); } }
-.pre-footer .shape--ring { border-color: var(--navy-900); left: 6%; top: 18%; width: 120px; height: 120px; }
-.pre-footer .shape--dot { right: 12%; top: 22%; }
-.pre-footer .shape--sky { right: 8%; bottom: 14%; }
+.pre-footer .shape--ring { border-color: var(--navy-900); left: 6%; top: 18%; width: 120px; height: 120px; --pf-x: 18px; --pf-y: 22px; --pf-dur: 15s; --pf-delay: -4s; }
+.pre-footer .shape--dot { right: 12%; top: 22%; --pf-x: -14px; --pf-y: 18px; --pf-s: 1.18; --pf-dur: 11s; --pf-delay: -7s; }
+.pre-footer .shape--sky { right: 8%; bottom: 14%; --pf-x: -22px; --pf-y: -16px; --pf-s: 1.1; --pf-dur: 13s; --pf-delay: -2s; }
+/* Fondo vivo y sutil: un brillo que se desplaza despacio y formas que flotan a destiempo.
+   Solo translate/scale/transform (compositor); translate y scale se suman al parallax, que usa transform. */
+.pre-footer::before { content: ""; position: absolute; inset: -25% -15%; z-index: 0; pointer-events: none;
+  background: radial-gradient(38% 55% at 28% 38%, rgba(255,255,255,.26), transparent 70%), radial-gradient(34% 50% at 74% 66%, rgba(255,226,140,.45), transparent 70%); }
+.motion-full .pre-footer::before { animation: pf-glow 22s ease-in-out infinite alternate; }
+.motion-full .pre-footer__shapes .shape { animation: pf-drift var(--pf-dur, 13s) ease-in-out var(--pf-delay, 0s) infinite alternate; }
+@keyframes pf-glow { from { transform: translate3d(-7%, -4%, 0) scale(1); } to { transform: translate3d(7%, 4%, 0) scale(1.08); } }
+@keyframes pf-drift { from { translate: 0 0; scale: 1; } to { translate: var(--pf-x, 0) var(--pf-y, 0); scale: var(--pf-s, 1.04); } }
 
 .site-footer { position: relative; overflow: clip; background: var(--navy-900); color: var(--navy-100); padding: var(--space-16) 0 var(--space-6); }
 .footer__grid { position: relative; z-index: 1; display: grid; gap: var(--space-8); }
