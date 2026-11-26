@@ -749,9 +749,13 @@ a.chip:active { transform: scale(.97); }
 .pre-footer .btn--gold { background: var(--navy-900); color: var(--on-dark); }
 .pre-footer .btn--gold::before { background: var(--blue-600); }
 @media (hover: hover) and (pointer: fine) { .pre-footer .btn--gold:hover { color: var(--on-dark); } }
-.pre-footer .shape--ring { border-color: var(--navy-900); left: 6%; top: 18%; width: 120px; height: 120px; --pf-x: 18px; --pf-y: 22px; --pf-dur: 15s; --pf-delay: -4s; }
+/* Aro en la esquina superior izquierda, recortado por el borde: queda siempre por encima del texto, en cualquier ancho. */
+.pre-footer .shape--ring { border-color: var(--navy-900); left: -40px; top: -50px; width: 140px; height: 140px; --pf-x: 16px; --pf-y: -12px; --pf-dur: 15s; --pf-delay: -4s; }
+@media (max-width: 767px) { .pre-footer .shape--ring { left: -34px; top: -40px; width: 96px; height: 96px; border-width: 14px; } }
 .pre-footer .shape--dot { right: 12%; top: 22%; --pf-x: -14px; --pf-y: 18px; --pf-s: 1.18; --pf-dur: 11s; --pf-delay: -7s; }
-.pre-footer .shape--sky { right: 8%; bottom: 14%; --pf-x: -22px; --pf-y: -16px; --pf-s: 1.1; --pf-dur: 13s; --pf-delay: -2s; }
+.pre-footer .shape--sky { right: -30px; bottom: -36px; width: 120px; height: 120px; --pf-x: -16px; --pf-y: 12px; --pf-s: 1.08; --pf-dur: 13s; --pf-delay: -2s; }
+@media (max-width: 767px) { .pre-footer .shape--sky { right: -24px; top: -30px; bottom: auto; width: 72px; height: 72px; --pf-y: -10px; } }
+@media (max-width: 479px) { .pre-footer .shape--dot { display: none; } }
 /* Fondo vivo y sutil: un brillo que se desplaza despacio y formas que flotan a destiempo.
    Solo translate/scale/transform (compositor); translate y scale se suman al parallax, que usa transform. */
 .pre-footer::before { content: ""; position: absolute; inset: -25% -15%; z-index: 0; pointer-events: none;
