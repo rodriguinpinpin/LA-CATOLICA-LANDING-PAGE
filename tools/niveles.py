@@ -102,7 +102,7 @@ def page(L):
       <div class="sec-head">
         <p class="eyebrow" data-reveal>Perfil del estudiante</p>
         <h2 class="h-sec" id="t-perfil" data-split>{L["traits"]} rasgos que <em>acompañamos</em></h2>
-        <p class="lead" data-reveal>Seleccione cada segmento de la rueda para conocer cómo crecen nuestros estudiantes de {L["name"]}.</p>
+        <p class="lead" data-reveal><span class="only-wheel">Seleccione cada segmento de la rueda</span><span class="only-acc">Toque cada rasgo</span> para conocer cómo crecen nuestros estudiantes de {L["name"]}.</p>
       </div>
       <div class="profile" id="perfil-render" data-reveal="fade"></div>
     </div>

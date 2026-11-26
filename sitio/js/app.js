@@ -279,6 +279,7 @@
   if (pin && full()) {
     var cards = $$('.stack__card', pin), dots = $$('.pin__dots span', pin), n = cards.length;
     register(pin, function () {
+      if (innerWidth < 768) { cards.forEach(function (c) { c.style.transform = ''; c.style.visibility = ''; }); return; }
       var seg = clamp(sectionProgress(pin) * 1.3 - 0.12, 0, 1) * (n - 1);
       cards.forEach(function (c, k) {
         var t = k === 0 ? 1 : clamp(seg - (k - 1), 0, 1);
@@ -319,7 +320,7 @@
   $$('[data-hscroll]').forEach(function (sec) {
     var track = $('.hx__track', sec), dist = 0;
     function measure() {
-      var pinned = full() && innerWidth >= 900;
+      var pinned = full() && innerWidth >= 768;
       sec.classList.toggle('is-pinned', pinned);
       var hint = $('.hx__hint', sec);
       if (hint) hint.lastChild.textContent = pinned ? 'Siga bajando para recorrerlos' : 'Deslice para ver los niveles';
@@ -582,12 +583,12 @@
   var planBox = $('#plan-render');
   if (planBox && lv) {
     var g = lv.grades.length;
-    var head = '<thead><tr><th scope="col">Área</th><th scope="col">Asignatura</th>' + lv.gradeShort.map(function (s, i) { return '<th scope="col"><abbr title="' + esc(lv.grades[i]) + '" style="text-decoration:none">' + esc(s) + '</abbr></th>'; }).join('') + '</tr></thead>';
+    var head = '<thead><tr><th scope="col" class="area-h">Área</th><th scope="col">Asignatura</th>' + lv.gradeShort.map(function (s, i) { return '<th scope="col"><abbr title="' + esc(lv.grades[i]) + '" style="text-decoration:none">' + esc(s) + '</abbr></th>'; }).join('') + '</tr></thead>';
     var rows = lv.plan.map(function (grp) {
       return grp.rows.map(function (row, ri) {
-        var h = '<tr>';
-        if (ri === 0) h += '<th scope="rowgroup" class="area" rowspan="' + grp.rows.length + '" style="--c:' + grp.color + '">' + esc(grp.area) + '</th>';
-        h += '<td class="subj">' + esc(row[0]) + '</td>';
+        var h = '<tr style="--c:' + grp.color + '">';
+        if (ri === 0) h += '<th scope="rowgroup" class="area" rowspan="' + grp.rows.length + '">' + esc(grp.area) + '</th>';
+        h += '<td class="subj">' + (ri === 0 ? '<span class="subj__area" aria-hidden="true">' + esc(grp.area) + '</span>' : '') + esc(row[0]) + '</td>';
         row.slice(1).forEach(function (c) {
           if (c === null) return;
           if (typeof c === 'object') h += c.cs ? '<td colspan="' + g + '" class="na">' + esc(c.v) + '</td>' : '<td rowspan="' + c.rs + '">' + esc(c.v) + '</td>';
@@ -596,7 +597,7 @@
         return h + '</tr>';
       }).join('');
     }).join('');
-    var foot = '<tfoot><tr><th colspan="2" scope="row">Total de horas semanales</th>' + lv.totals.map(function (t) { return '<td>' + t + '</td>'; }).join('') + '</tr></tfoot>';
+    var foot = '<tfoot><tr><td class="area-h" aria-hidden="true"></td><th scope="row">Total de horas semanales</th>' + lv.totals.map(function (t) { return '<td>' + t + '</td>'; }).join('') + '</tr></tfoot>';
     planBox.innerHTML = '<div class="table-wrap" tabindex="0" role="region" aria-label="Plan curricular de ' + lv.name + ' (desplazable)"><table class="lc-table plan-table"><caption>Plan curricular · horas semanales</caption>' + head + '<tbody>' + rows + '</tbody>' + foot + '</table></div>' +
       '<p class="plan-note">Fuente: brochure Matrículas 2027. ' + (lv.totalsNote ? withTbc(lv.totalsNote) : '') + '</p>';
   }
