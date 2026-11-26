@@ -22,9 +22,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="css/tokens.css?v=8">
-  <link rel="stylesheet" href="css/bundle.css?v=8">
-  <link rel="stylesheet" href="css/site.css?v=8">
+  <link rel="stylesheet" href="css/tokens.css?v=9">
+  <link rel="stylesheet" href="css/bundle.css?v=9">
+  <link rel="stylesheet" href="css/site.css?v=9">
   <script>
     /* Preferencia de movimiento: guardada por el visitante > sistema operativo. ?motion=on fuerza animaciones. */
     (function (h) {
@@ -38,8 +38,8 @@
       setTimeout(function () { h.classList.add('is-ready'); }, 4000);
     })(document.documentElement);
   </script>
-  <script src="js/data.js?v=8" defer></script>
-  <script src="js/app.js?v=8" defer></script>
+  <script src="js/data.js?v=9" defer></script>
+  <script src="js/app.js?v=9" defer></script>
 <!-- @end head -->
 </head>
 <body data-page="inicio" id="top">
@@ -139,59 +139,30 @@
 
 <main id="contenido">
 
-  <!-- 1. Hero: slider con tarjetas que se expanden -->
-  <section class="hs" data-slider aria-roledescription="carrusel" aria-label="Presentación del colegio">
-    <div class="hs__bg"></div>
+  <!-- 1. Hero: una sola frase; solo rotan las fotos de fondo -->
+  <section class="hs" data-slider data-imgs="assets/img/capilla.webp, assets/img/hero-kinder.webp, assets/img/hero-primaria.webp, assets/img/hero-secundaria.webp" aria-label="Presentación del colegio">
+    <div class="hs__bg" aria-hidden="true"></div>
     <div class="hs__veil" aria-hidden="true"></div>
     <div class="hs__pattern" aria-hidden="true"></div>
     <div class="container hs__inner">
       <div class="hs__texts">
-        <article class="hs__slide is-active" data-img="assets/img/capilla.webp" data-label="Nuestra identidad" aria-roledescription="diapositiva" aria-label="1 de 4">
+        <div class="hs__slide is-active">
           <p class="eyebrow eyebrow--gold hs__fade" style="--fd:120ms">Kinder · Primaria · Secundaria</p>
           <h1 class="hs__title hs__title--long" data-hs-split>Formamos ciudadanos <em>íntegros</em> con una <em>visión global</em></h1>
-          <p class="hs__text hs__fade" style="--fd:620ms">Educación católica sostenida por tres pilares: Dios, Virtud y Sabiduría.</p>
+          <p class="hs__text hs__fade" style="--fd:620ms">Cultivamos el amor al conocimiento y a Dios, formando estudiantes íntegros que sirven a la comunidad.</p>
           <div class="hs__ctas hs__fade" style="--fd:760ms">
             <a class="btn btn--gold magnetic" href="admision.html#solicitar">Solicitar vacante <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
             <a class="btn btn--ghost magnetic" href="#niveles">Conocer los niveles</a>
           </div>
-        </article>
-        <article class="hs__slide" data-img="assets/img/hero-kinder.webp" data-label="Kinder" aria-roledescription="diapositiva" aria-label="2 de 4">
-          <p class="eyebrow eyebrow--gold hs__fade" style="--fd:120ms">Kinder · Kinder I, II y III</p>
-          <p class="hs__title" data-hs-split>Curiosos e <em>inquisitivos</em></p>
-          <p class="hs__text hs__fade" style="--fd:560ms">Interés por descubrir el mundo, formulando preguntas y explorando a través del juego y la observación.</p>
-          <div class="hs__ctas hs__fade" style="--fd:700ms">
-            <a class="btn btn--gold magnetic" href="kinder.html">Conocer Kinder <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn btn--ghost magnetic" href="admision.html?nivel=Kinder#solicitar">Solicitar vacante</a>
-          </div>
-        </article>
-        <article class="hs__slide" data-img="assets/img/hero-primaria.webp" data-label="Primaria" aria-roledescription="diapositiva" aria-label="3 de 4">
-          <p class="eyebrow eyebrow--gold hs__fade" style="--fd:120ms">Primaria · 1.º a 6.º grado</p>
-          <p class="hs__title" data-hs-split>Aprendices <em>autónomos</em> y reflexivos</p>
-          <p class="hs__text hs__fade" style="--fd:560ms">Capacidad para planificar y evaluar su propio aprendizaje, desarrollando hábitos de estudio.</p>
-          <div class="hs__ctas hs__fade" style="--fd:700ms">
-            <a class="btn btn--gold magnetic" href="primaria.html">Conocer Primaria <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn btn--ghost magnetic" href="admision.html?nivel=Primaria#solicitar">Solicitar vacante</a>
-          </div>
-        </article>
-        <article class="hs__slide" data-img="assets/img/hero-secundaria.webp" data-label="Secundaria" aria-roledescription="diapositiva" aria-label="4 de 4">
-          <p class="eyebrow eyebrow--gold hs__fade" style="--fd:120ms">Secundaria · 1.º a 5.º año</p>
-          <p class="hs__title" data-hs-split>Pensadores <em>críticos</em> y analíticos</p>
-          <p class="hs__text hs__fade" style="--fd:560ms">Capacidad para analizar y evaluar información de manera crítica, aplicando pensamiento científico.</p>
-          <div class="hs__ctas hs__fade" style="--fd:700ms">
-            <a class="btn btn--gold magnetic" href="secundaria.html">Conocer Secundaria <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn btn--ghost magnetic" href="admision.html?nivel=Secundaria#solicitar">Solicitar vacante</a>
-          </div>
-        </article>
+        </div>
       </div>
       <div class="hs__bottom">
         <div class="hs__controls">
-          <button class="hs__arrow hs__prev" type="button" aria-label="Diapositiva anterior"><i class="ph-fill ph-caret-left" aria-hidden="true"></i></button>
-          <button class="hs__arrow hs__next" type="button" aria-label="Diapositiva siguiente"><i class="ph-fill ph-caret-right" aria-hidden="true"></i></button>
-          <div class="hs__count" aria-hidden="true"><span class="hs__count-n"><span>01</span></span><small>/ 04</small></div>
+          <button class="hs__arrow hs__prev" type="button" aria-label="Foto anterior"><i class="ph-fill ph-caret-left" aria-hidden="true"></i></button>
+          <button class="hs__arrow hs__next" type="button" aria-label="Foto siguiente"><i class="ph-fill ph-caret-right" aria-hidden="true"></i></button>
           <div class="hs__progress" aria-hidden="true"><span></span></div>
           <div class="hs__dots"></div>
         </div>
-        <div class="hs__rail" aria-label="Siguientes diapositivas"></div>
       </div>
     </div>
     <span class="hs__scroll" aria-hidden="true">Desliza</span>

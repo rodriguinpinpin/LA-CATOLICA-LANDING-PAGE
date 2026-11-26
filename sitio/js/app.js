@@ -352,80 +352,54 @@
     }
   });
 
-  /* ---------- Hero con slider de tarjetas (referencia del video) ---------- */
+  /* ---------- Hero: una sola frase fija; solo rotan las fotos de fondo ---------- */
   var hs = $('[data-slider]');
   if (hs) (function () {
-    var slides = $$('.hs__slide', hs), bg = $('.hs__bg', hs), rail = $('.hs__rail', hs), dotsWrap = $('.hs__dots', hs);
-    var countN = $('.hs__count-n', hs), bar = $('.hs__progress span', hs);
-    var N = slides.length, cur = 0, busy = false, elapsed = 0, lastT = 0, paused = false, inView = true;
+    var imgs = (hs.getAttribute('data-imgs') || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+    var bg = $('.hs__bg', hs), dotsWrap = $('.hs__dots', hs), bar = $('.hs__progress span', hs);
+    var N = imgs.length, cur = 0, busy = false, elapsed = 0, lastT = 0, paused = false, inView = true;
     var DURATION = 7000;
+    if (!N) return;
 
     function layer(src) {
       var d = document.createElement('div'); d.className = 'hs__layer';
       var img = document.createElement('img'); img.src = src; img.alt = ''; img.decoding = 'async';
       d.appendChild(img); bg.appendChild(d); return d;
     }
-    layer(slides[0].getAttribute('data-img'));
-    slides.forEach(function (s, i) { if (i) { s.setAttribute('aria-hidden', 'true'); s.inert = true; } });
+    layer(imgs[0]);
+    // Precarga el resto para que el cambio de foto no muestre un hueco
+    imgs.slice(1).forEach(function (src) { var i = new Image(); i.decoding = 'async'; i.src = src; });
 
-    function buildRail() {
-      if (rail) {
-        rail.innerHTML = '';
-        for (var k = 1; k < N; k++) {
-          var idx = (cur + k) % N, s = slides[idx];
-          var b = document.createElement('button');
-          b.type = 'button'; b.className = 'hs__card is-in-rail'; b.setAttribute('data-go', idx); b.setAttribute('data-cursor', 'Ir');
-          b.style.setProperty('--cd', [0, 60, 110][k - 1] + 'ms');
-          b.setAttribute('aria-label', 'Ver diapositiva ' + (idx + 1) + ': ' + s.getAttribute('data-label'));
-          b.innerHTML = '<img src="' + s.getAttribute('data-img') + '" alt="" loading="lazy"><span><small>0' + (idx + 1) + '</small>' + s.getAttribute('data-label') + '</span>';
-          rail.appendChild(b);
-        }
-      }
-      if (dotsWrap) {
-        dotsWrap.innerHTML = slides.map(function (s, i) { return '<button type="button" data-go="' + i + '" aria-label="Diapositiva ' + (i + 1) + '"' + (i === cur ? ' aria-current="true"' : '') + '></button>'; }).join('');
-      }
+    function renderDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = imgs.map(function (s, i) { return '<button type="button" data-go="' + i + '" aria-label="Foto ' + (i + 1) + ' de ' + N + '"' + (i === cur ? ' aria-current="true"' : '') + '></button>'; }).join('');
     }
-    buildRail();
+    renderDots();
 
-    function setCount() {
-      var txt = '0' + (cur + 1);
-      if (full() && countN.animate) {
-        countN.innerHTML = '<span>' + txt + '</span>';
-        countN.firstChild.animate([{ transform: 'translateY(100%)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 500, easing: EASE_OUT });
-      } else countN.textContent = txt;
-    }
-
-    function go(next, fromEl, direction) {
-      if (busy || next === cur) return;
-      busy = true; elapsed = 0;
-      var prev = cur; cur = next;
-      slides[prev].classList.remove('is-active'); slides[prev].setAttribute('aria-hidden', 'true'); slides[prev].inert = true;
-      slides[cur].classList.add('is-active'); slides[cur].removeAttribute('aria-hidden'); slides[cur].inert = false;
+    function go(next, direction) {
+      if (busy || next === cur || N < 2) return;
+      busy = true; elapsed = 0; cur = next;
       var old = $$('.hs__layer', bg);
-      var L = layer(slides[cur].getAttribute('data-img'));
+      var L = layer(imgs[cur]);
       L.classList.add('is-entering');
       function done() { old.forEach(function (o) { o.remove(); }); L.classList.remove('is-entering'); busy = false; }
       if (full() && L.animate) {
-        var hr = hs.getBoundingClientRect(), start;
-        if (fromEl) {
-          var r = fromEl.getBoundingClientRect();
-          start = 'inset(' + (r.top - hr.top) + 'px ' + (hr.right - r.right) + 'px ' + (hr.bottom - r.bottom) + 'px ' + (r.left - hr.left) + 'px round 18px)';
-        } else start = direction < 0 ? 'inset(0px 100% 0px 0px round 0px)' : 'inset(0px 0px 0px 100% round 0px)';
-        L.animate([{ clipPath: start }, { clipPath: 'inset(0px 0px 0px 0px round 0px)' }], { duration: 1000, easing: EASE_IO, fill: 'forwards' }).onfinish = done;
-        L.firstChild.animate([{ transform: 'scale(1.25)' }, { transform: 'scale(1)' }], { duration: 1500, easing: EASE_OUT, fill: 'forwards' });
+        var start = direction < 0 ? 'inset(0px 100% 0px 0px)' : 'inset(0px 0px 0px 100%)';
+        L.animate([{ clipPath: start }, { clipPath: 'inset(0px 0px 0px 0px)' }], { duration: 1000, easing: EASE_IO, fill: 'forwards' }).onfinish = done;
+        L.firstChild.animate([{ transform: 'scale(1.12)' }, { transform: 'scale(1)' }], { duration: 1500, easing: EASE_OUT, fill: 'forwards' });
       } else {
         L.style.opacity = 0;
         L.style.transition = 'opacity 400ms ease';
         requestAnimationFrame(function () { L.style.opacity = 1; });
         setTimeout(done, 420);
       }
-      setCount(); buildRail();
+      renderDots();
     }
-    function nextSlide(dir) { go((cur + (dir || 1) + N) % N, null, dir || 1); }
+    function nextSlide(dir) { go((cur + (dir || 1) + N) % N, dir || 1); }
 
     hs.addEventListener('click', function (e) {
       var b = e.target.closest('[data-go]');
-      if (b) go(parseInt(b.getAttribute('data-go'), 10), b.classList.contains('hs__card') ? b : null, 1);
+      if (b) { var to = parseInt(b.getAttribute('data-go'), 10); go(to, to < cur ? -1 : 1); }
       if (e.target.closest('.hs__next')) nextSlide(1);
       if (e.target.closest('.hs__prev')) nextSlide(-1);
     });
