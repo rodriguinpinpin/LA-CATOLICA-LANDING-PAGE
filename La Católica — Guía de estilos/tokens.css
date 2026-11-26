@@ -1,0 +1,173 @@
+/* La Católica — Guía de estilos — generated from tokens.json */
+:root, [data-theme="light"] {
+  --navy-900: #002559; /* Azul institucional profundo. Fondo del hero, footer y bandas oscuras (parte baja del degradado de portada). Texto blanco, gold-500 o navy-100 encima (≥8:1). */
+  --navy-800: #00366c; /* Azul de marca principal. Títulos, texto de cuerpo sobre blanco (12:1), círculos de íconos de pilares, cabeceras de tabla. Botón secundario. */
+  --blue-600: #0070b7; /* Azul medio (parte alta del degradado de portada). Enlaces y botón de acción sobre blanco; texto blanco encima 5.2:1. */
+  --blue-500: #3696d8; /* Azul claro de sub-cabeceras de tabla y segmento azul del Perfil del Estudiante. Texto encima: navy-900 (4.6:1) o blanco solo ≥18px bold. */
+  --sky-500: #00a8e4; /* Celeste de acento (pestaña “Calendarización”). Solo decorativo o con texto navy-900 encima (5.5:1); nunca texto blanco. */
+  --navy-100: #c8d6e8; /* Texto secundario sobre navy-900 (10:1) y bordes suaves sobre fondos oscuros. */
+  --gold-500: #f1b300; /* Amarillo de marca. Títulos display sobre navy (KINDER, PRIMARIA…), botón principal (texto navy-900, 7.9:1), círculos de Valores y franja de la onda. Nunca como texto sobre blanco (1.9:1). */
+  --gold-100: #fff4d1; /* Fondo suave de avisos y realces cálidos. Texto gold-700 encima. */
+  --gold-700: #7a4f00; /* Texto ámbar legible sobre gold-100 (6.5:1) o blanco. */
+  --red-600: #de0612; /* Rojo de la onda divisoria y del logo. Acento puntual; texto blanco encima 5.1:1. No usar para errores de formulario junto a la onda. */
+  --logo-maroon: #7a0a0a; /* Granate del anillo del logo. Solo referencia del logotipo, no usar en UI. */
+  --logo-gold: #ae820c; /* Dorado del monograma LC. Solo referencia del logotipo, no usar en UI. */
+  --accent-orange: #fc7e00; /* Naranja de Principios Educativos y títulos de tarjetas de servicio. Como relleno de ícono o trazo; texto: usar accent-orange-text. */
+  --accent-orange-text: #b35300; /* Versión accesible del naranja para títulos y etiquetas sobre blanco (5.1:1). */
+  --accent-green: #009642; /* Verde de Principios y del Perfil del Estudiante. Rellenos e íconos; texto: accent-green-text. */
+  --accent-green-text: #007a36; /* Verde accesible para texto sobre blanco (5.5:1). */
+  --accent-green-light: #2acc6c; /* Verde claro del Perfil del Estudiante. Solo relleno decorativo. */
+  --accent-purple: #9654b4; /* Morado de Educación Inclusiva y Psicometría. Texto sobre blanco o blanco encima (5:1). */
+  --accent-slate: #30485a; /* Gris pizarra del segmento “Desarrollo de la Fe” en el Perfil del Estudiante. Relleno; texto blanco encima. */
+  --surface: #ffffff; /* Fondo general de página. */
+  --surface-soft: #eef4fb; /* Fondo de tarjetas, citas y secciones alternas (azul muy claro de los brochures). Texto navy-800 (10.9:1) o ink-muted (5.9:1). */
+  --surface-tint: #e3effa; /* Filas de tabla y celdas de datos. Texto navy-800 encima (10.3:1). */
+  --ink: var(--navy-800); /* Texto principal sobre surface, surface-soft y surface-tint. */
+  --ink-muted: #4a5f7e; /* Texto secundario, pies de foto y metadatos sobre surface (6.5:1) y surface-soft (5.9:1). */
+  --line: #c9d7ea; /* Bordes y divisores finos sobre fondos claros (decorativo, no portador de información). */
+  --line-strong: #5c7193; /* Borde de campos de formulario y controles sobre blanco (4.9:1). */
+  --on-dark: #ffffff; /* Texto principal sobre navy-900, navy-800, blue-600 y red-600. */
+  --focus-ring: #f1b300; /* Anillo de foco: 2px gold-500 con separación de 2px. Sobre blanco se acompaña de un anillo navy-800 exterior. */
+  --shadow-sm: 0 2px 8px rgba(0, 37, 89, 0.08); /* Tarjetas en reposo sobre blanco. */
+  --shadow-md: 0 10px 28px rgba(0, 37, 89, 0.14); /* Tarjetas en hover y menú flotante. */
+  --shadow-glow: 0 0 18px rgba(54, 150, 216, 0.55); /* Brillo suave del año “2025/2026” en el hero (solo texto display sobre navy). */
+}
+:root {
+  --space-1: 4px; /* Separación mínima ícono–texto. */
+  --space-2: 8px; /* Gap entre chips y elementos en línea. */
+  --space-3: 12px; /* Padding vertical de botones y celdas. */
+  --space-4: 16px; /* Padding interno compacto; margen lateral en móvil. */
+  --space-6: 24px; /* Padding de tarjetas; gap de grillas de tarjetas. */
+  --space-8: 32px; /* Separación título–contenido; margen lateral en tablet. */
+  --space-12: 48px; /* Separación entre bloques dentro de una sección. */
+  --space-16: 64px; /* Padding vertical de sección en móvil. */
+  --space-24: 96px; /* Padding vertical de sección en escritorio. */
+  --container: 1200px; /* Ancho máximo del contenido. */
+  --radius-sm: 6px; /* Celdas de tabla, campos de formulario. */
+  --radius-md: 12px; /* Botones, fotos de galería, tarjetas pequeñas. */
+  --radius-lg: 24px; /* Tarjetas de pilares, servicios y citas (esquinas muy redondeadas del brochure). */
+  --radius-pill: 999px; /* Chips de valores, pestaña “Calendarización”, etiquetas de nivel. */
+  --font-display: "Bitter", "Clarendon", Georgia, serif;
+  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-display-xl: 800 72px/76px var(--font-display); /* Nombre del nivel en el hero, en mayúsculas y gold-500 sobre navy. Móvil: 44px/48px. */
+  --text-h1: 700 48px/56px var(--font-display); /* Título principal de página. Móvil: 34px/40px. */
+  --text-h2: 700 36px/44px var(--font-display); /* Título de sección (segunda línea fuerte del patrón de dos líneas). Móvil: 28px/34px. */
+  --text-h3: 700 26px/34px var(--font-display); /* Subtítulo de bloque y tarjetas destacadas. Móvil: 22px/30px. */
+  --text-h4: 700 20px/28px var(--font-display); /* Título de tarjeta (Dios, Virtud, Sabiduría), Misión/Visión. */
+  --text-kicker: 600 20px/26px var(--font-display); /* Primera línea pequeña del título de dos líneas. */
+  --text-eyebrow: 700 13px/18px var(--font-sans); /* Etiqueta en mayúsculas sobre títulos y títulos de tarjeta de servicio. */
+  --text-body-lg: 400 18px/30px var(--font-sans); /* Párrafo introductorio de sección. */
+  --text-body: 400 16px/26px var(--font-sans); /* Texto corrido por defecto. Alinear a la izquierda, nunca justificado. */
+  --text-body-strong: 600 16px/26px var(--font-sans); /* Énfasis dentro de párrafos y datos clave. */
+  --text-small: 400 14px/22px var(--font-sans); /* Celdas de tabla, notas y contenido de tarjetas compactas. */
+  --text-caption: 500 12px/18px var(--font-sans); /* Pies de foto y etiquetas de galería. */
+  --text-button: 600 16px/24px var(--font-sans); /* Texto de botones y enlaces de acción. */
+  --text-quote: italic 600 20px/30px var(--font-sans); /* Lema institucional y citas destacadas. */
+  --text-price: 700 40px/44px var(--font-sans); /* Montos en la sección de Inversión Educativa. */
+}
+.display-xl {
+  font-family: var(--font-display);
+  font-size: 72px;
+  line-height: 76px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.kicker {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-strong {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.small {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.button {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.quote {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  font-style: italic;
+}
+.price {
+  font-family: var(--font-sans);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: 0;
+}

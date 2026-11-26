@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap");
+
+/* La Católica — estilos base de componentes. Prefijo: lc- */
+body { margin: 0; font-family: var(--font-sans); color: var(--ink); background: var(--surface); -webkit-font-smoothing: antialiased; }
+.lc-stage { padding: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+.lc-stage.dark { background: var(--navy-900); }
+.lc-display { font-family: var(--font-display); }
+
+/* Botones */
+.lc-btn { font: 600 16px/24px var(--font-sans); display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-6); border-radius: var(--radius-md); border: 2px solid transparent; cursor: pointer; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+.lc-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.lc-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; box-shadow: 0 0 0 6px var(--navy-800); }
+.lc-btn-primary { background: var(--gold-500); color: var(--navy-900); }
+.lc-btn-secondary { background: var(--navy-800); color: var(--on-dark); }
+.lc-btn-outline { background: transparent; color: var(--navy-800); border-color: var(--navy-800); }
+.lc-btn-ghost-dark { background: transparent; color: var(--on-dark); border-color: var(--on-dark); }
+.lc-btn-whatsapp { background: var(--accent-green-text); color: var(--on-dark); }
+
+/* Título de sección */
+.lc-title { position: relative; padding-left: 0; }
+.lc-title .bar { display: inline-block; width: 64px; height: 8px; background: var(--navy-800); vertical-align: middle; margin-right: var(--space-4); }
+.lc-title .kicker { font: 600 20px/26px var(--font-display); color: var(--navy-800); display: block; }
+.lc-title h2 { font: 700 36px/44px var(--font-display); color: var(--navy-800); margin: 0; }
+.lc-title .rule { display: block; height: 2px; background: var(--blue-500); margin-top: var(--space-3); width: 160px; }
+
+/* Pilar (Dios / Virtud / Sabiduría) */
+.lc-pillar { position: relative; display: flex; align-items: flex-start; gap: var(--space-4); }
+.lc-pillar .icon { flex: none; width: 72px; height: 72px; border-radius: 50%; background: var(--navy-800); color: var(--on-dark); display: grid; place-items: center; z-index: 1; }
+.lc-pillar .box { margin-left: -40px; padding: var(--space-3) var(--space-6) var(--space-4) 52px; border: 2px solid var(--navy-800); border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg); border-top-color: transparent; background: var(--surface); }
+.lc-pillar h4 { font: 700 22px/28px var(--font-display); color: var(--navy-800); margin: -22px 0 var(--space-1) 0; background: var(--surface); display: inline-block; padding-right: var(--space-2); }
+.lc-pillar p { font: 400 15px/24px var(--font-sans); color: var(--ink); margin: 0; }
+
+/* Valor */
+.lc-value { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); width: 140px; }
+.lc-value .circle { width: 88px; height: 88px; border-radius: 50%; background: var(--gold-500); color: var(--navy-900); display: grid; place-items: center; box-shadow: var(--shadow-sm); }
+.lc-value .label { font: 700 13px/18px var(--font-sans); color: var(--navy-800); background: var(--surface); border: 2px solid var(--gold-500); border-radius: var(--radius-pill); padding: var(--space-1) var(--space-4); margin-top: -18px; position: relative; }
+
+/* Tarjeta de servicio */
+.lc-service { display: flex; align-items: center; gap: var(--space-6); background: var(--surface-soft); border-radius: 120px var(--radius-lg) var(--radius-lg) 120px; padding: var(--space-3) var(--space-6) var(--space-3) var(--space-3); border-right: 3px solid var(--accent, var(--accent-orange)); box-shadow: var(--shadow-sm); max-width: 560px; }
+.lc-service .photo { flex: none; width: 140px; height: 140px; border-radius: 50%; background: var(--navy-100) center/cover; }
+.lc-service h5 { font: 700 13px/18px var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text, var(--accent-orange-text)); margin: 0 0 var(--space-1); }
+.lc-service p { font: 400 15px/23px var(--font-sans); color: var(--ink); margin: 0; }
+
+/* Cita */
+.lc-quote { background: var(--surface-soft); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-6); box-shadow: inset 0 -3px 0 var(--blue-600); max-width: 460px; font: 400 18px/28px var(--font-sans); color: var(--ink); }
+.lc-motto { font: italic 600 20px/30px var(--font-sans); color: var(--on-dark); }
+
+/* Tabla */
+.lc-table { border-collapse: separate; border-spacing: 4px; font: 400 14px/20px var(--font-sans); width: 100%; max-width: 640px; }
+.lc-table caption { background: var(--navy-800); color: var(--on-dark); font: 700 15px/20px var(--font-sans); letter-spacing: .03em; text-transform: uppercase; padding: var(--space-2); border-radius: var(--radius-md) var(--radius-md) 0 0; caption-side: top; }
+.lc-table th { background: var(--blue-500); color: var(--navy-900); font-weight: 700; padding: var(--space-2); }
+.lc-table td { background: var(--surface-tint); color: var(--ink); text-align: center; padding: var(--space-2); border-radius: var(--radius-sm); }
+.lc-table td:first-child { font-weight: 600; }
+
+/* Precio */
+.lc-price { display: inline-flex; flex-direction: column; min-width: 180px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+.lc-price .head { background: var(--blue-500); color: var(--navy-900); font: 700 14px/20px var(--font-sans); text-align: center; padding: var(--space-2); }
+.lc-price .amount { background: var(--surface-soft); color: var(--navy-800); font: 700 40px/44px var(--font-sans); text-align: center; padding: var(--space-4); }
+.lc-price .amount small { font-size: 18px; vertical-align: top; margin-right: 4px; }
+
+/* Chip / pestaña */
+.lc-chip { display: inline-flex; align-items: center; gap: var(--space-2); font: 600 14px/20px var(--font-sans); padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill); background: var(--surface-soft); color: var(--navy-800); }
+.lc-chip.navy { background: var(--navy-800); color: var(--on-dark); }
+.lc-chip.gold { background: var(--gold-500); color: var(--navy-900); }
+.lc-tab { display: inline-block; font: 700 28px/36px var(--font-display); background: var(--sky-500); color: var(--navy-900); padding: var(--space-2) var(--space-8); border-radius: var(--radius-pill); }
+
+/* Item numerado */
+.lc-step { display: flex; gap: var(--space-4); max-width: 360px; }
+.lc-step .n { font: 700 44px/44px var(--font-display); color: var(--navy-800); }
+.lc-step h5 { font: 700 15px/22px var(--font-sans); color: var(--blue-600); margin: 0; }
+.lc-step p { font: 400 14px/22px var(--font-sans); color: var(--ink); margin: 0; }
+
+/* Hero */
+.lc-hero { position: relative; color: var(--on-dark); background: linear-gradient(180deg, var(--blue-600) 0%, var(--navy-900) 70%); overflow: hidden; padding: var(--space-12) var(--space-12) 120px; }
+.lc-hero .brand { display: flex; align-items: center; gap: var(--space-3); }
+.lc-hero .brand img { width: 64px; height: 64px; }
+.lc-hero .brand b { font: 700 26px/28px var(--font-display); display: block; }
+.lc-hero .brand span { font: 700 10px/12px var(--font-display); letter-spacing: .06em; }
+.lc-hero .level { font: 800 72px/76px var(--font-display); color: var(--gold-500); margin: var(--space-8) 0 0; letter-spacing: .01em; }
+.lc-hero .year { font: 700 22px/28px var(--font-display); }
+.lc-hero .year em { font-style: normal; color: var(--on-dark); text-shadow: var(--shadow-glow); }
+.lc-hero .wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 90px; display: block; }
+
+/* Galería */
+.lc-gallery { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); max-width: 720px; }
+.lc-gallery figure { margin: 0; position: relative; aspect-ratio: 4/3; border-radius: var(--radius-md); overflow: hidden; background: var(--navy-100); }
+.lc-gallery figcaption { position: absolute; left: 0; bottom: var(--space-2); background: var(--navy-800); color: var(--on-dark); font: 500 12px/18px var(--font-sans); padding: 2px var(--space-3); border-radius: 0 var(--radius-pill) var(--radius-pill) 0; }

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kinder · “La Católica” Institución Educativa Privada</title>
+  <meta name="description" content="Kinder en el colegio “La Católica”: Kinder I, II y III, horario 8:30 a.m. – 1:00 p.m., perfil del estudiante y plan curricular.">
+  <meta property="og:title" content="Kinder · “La Católica”">
+  <meta property="og:description" content="Curiosos e inquisitivos. Kinder I, II y III.">
+<!-- @include head -->
+  <meta name="theme-color" content="#002559">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="“La Católica” · Institución Educativa Privada">
+  <meta property="og:image" content="assets/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/brand/logo-lc-192.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="css/tokens.css?v=8">
+  <link rel="stylesheet" href="css/bundle.css?v=8">
+  <link rel="stylesheet" href="css/site.css?v=8">
+  <script>
+    /* Preferencia de movimiento: guardada por el visitante > sistema operativo. ?motion=on fuerza animaciones. */
+    (function (h) {
+      h.classList.add('js');
+      var m = null; try { m = localStorage.getItem('lc-motion'); } catch (e) {}
+      if (/[?&]motion=on/.test(location.search)) { m = 'full'; try { localStorage.setItem('lc-motion', 'full'); } catch (e) {} }
+      var reduced = m ? m === 'reduced' : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      h.classList.add(reduced ? 'motion-reduced' : 'motion-full');
+      var first = true; try { first = !sessionStorage.getItem('lc-visited'); sessionStorage.setItem('lc-visited', '1'); } catch (e) {}
+      if (first) h.classList.add('first-visit');
+      setTimeout(function () { h.classList.add('is-ready'); }, 4000);
+    })(document.documentElement);
+  </script>
+  <script src="js/data.js?v=8" defer></script>
+  <script src="js/app.js?v=8" defer></script>
+<!-- @end head -->
+</head>
+<body data-page="kinder" data-level="kinder" id="top">
+<!-- @include header -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Telón de transición entre páginas + preloader -->
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__brand">
+      <img src="assets/brand/logo-lc-256.webp" alt="" width="88" height="88">
+      <span class="curtain__word">“La Católica”</span>
+      <span class="curtain__sub">Institución Educativa Privada</span>
+    </div>
+    <div class="curtain__bar"><span></span></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+
+  <div class="chrome">
+    <div class="topbar">
+      <div class="container topbar__row">
+        <a class="topbar__promo" href="admision.html#solicitar"><span class="pulse-dot" aria-hidden="true"></span>Admisión: solicite su vacante</a>
+        <div class="topbar__right">
+          <a href="tel:+51994384050"><i class="ph-fill ph-phone" aria-hidden="true"></i>994 384 050</a>
+          <a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a>
+          <button class="motion-toggle" type="button" aria-pressed="true" title="Activar o reducir las animaciones"><i class="ph-fill ph-sparkle" aria-hidden="true"></i><span>Animaciones</span><span class="motion-toggle__state">sí</span></button>
+        </div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container site-header__row">
+        <a class="brand" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="52" height="52" class="brand__logo">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" data-nav="inicio">Inicio</a></li>
+            <li><a href="nosotros.html" data-nav="nosotros">Nosotros</a></li>
+            <li class="has-drop">
+              <button class="drop-trigger" type="button" aria-expanded="false" aria-controls="drop-niveles" data-nav="niveles">Niveles <i class="ph-fill ph-caret-down" aria-hidden="true"></i></button>
+              <div class="drop" id="drop-niveles">
+                <a href="kinder.html" class="drop__item"><img src="assets/img/hero-kinder.webp" alt="" width="64" height="48" loading="lazy"><span><b>Kinder</b><small>Kinder I, II y III</small></span></a>
+                <a href="primaria.html" class="drop__item"><img src="assets/img/hero-primaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Primaria</b><small>1.º a 6.º grado</small></span></a>
+                <a href="secundaria.html" class="drop__item"><img src="assets/img/hero-secundaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Secundaria</b><small>1.º a 5.º año</small></span></a>
+              </div>
+            </li>
+            <li><a href="propuesta.html" data-nav="propuesta">Propuesta</a></li>
+            <li><a href="admision.html" data-nav="admision">Admisión</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--gold btn--sm header-cta" href="admision.html#solicitar">Solicitar vacante</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+          <span class="menu-btn__label">Menú</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Menú a pantalla completa -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+    <div class="menu__inner container">
+      <p class="eyebrow eyebrow--gold menu__eyebrow">Explore el colegio</p>
+      <div class="menu__groups">
+        <section class="menu__group">
+          <span class="menu__n">01</span>
+          <a class="menu__title" href="nosotros.html">Nuestro colegio <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="nosotros.html#identidad">Identidad</a></li><li><a href="nosotros.html#mision">Misión y visión</a></li><li><a href="nosotros.html#valores">Valores</a></li><li><a href="nosotros.html#familia">Familia Catolicista</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">02</span>
+          <span class="menu__title">Niveles</span>
+          <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">03</span>
+          <a class="menu__title" href="propuesta.html">Propuesta educativa <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="propuesta.html#principios">Principios educativos</a></li><li><a href="propuesta.html#servicios">Servicios de apoyo</a></li><li><a href="propuesta.html#talleres">Talleres</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">04</span>
+          <a class="menu__title" href="admision.html">Admisión <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="admision.html#inversion">Inversión</a></li><li><a href="admision.html#requisitos">Requisitos</a></li><li><a href="admision.html#calendario">Calendario</a></li><li><a href="admision.html#solicitar">Solicitar vacante</a></li></ul>
+        </section>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--gold" href="admision.html#solicitar">Solicitar vacante</a>
+        <a class="btn btn--ghost" href="https://wa.me/51994384050" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>994 384 050</a>
+        <p class="menu__contact"><i class="ph-fill ph-map-pin" aria-hidden="true"></i>Jr. Tarapacá 634 · @ieplacatolicape</p>
+      </div>
+    </div>
+  </div>
+<!-- @end header -->
+
+<main id="contenido">
+  <section class="phero on-dark" aria-labelledby="t-hero">
+    <span class="shape shape--soft" aria-hidden="true"></span>
+    <span class="shape shape--ring shape-float" data-speed="0.15" aria-hidden="true"></span>
+    <span class="shape shape--dot shape-float" data-speed="-0.2" aria-hidden="true"></span>
+    <p class="ghost ghost--bottom" data-speed="0.3" data-axis="x" aria-hidden="true">Kinder</p>
+    <div class="container phero__grid">
+      <div>
+        <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><a href="index.html#niveles">Niveles</a><span aria-hidden="true">/</span><span aria-current="page">Kinder</span></nav>
+        <p class="eyebrow eyebrow--gold" data-reveal>Nivel 01</p>
+        <h1 class="lv-hero__name" id="t-hero" data-split>Kinder</h1>
+        <p class="lv-hero__tagline" data-reveal>Curiosos e inquisitivos</p>
+        <p class="lead" data-reveal>Kinder I, II y III. Aprendizaje a través del juego, la exploración y el acompañamiento cercano de docentes y familias.</p>
+        <div class="phero__chips" data-stagger>
+          <span class="chip" data-reveal><i class="ph-fill ph-clock" aria-hidden="true"></i>8:30 a.m. – 1:00 p.m.</span>
+          <span class="chip" data-reveal><i class="ph-fill ph-student" aria-hidden="true"></i>Kinder I, II y III</span>
+          <span class="chip" data-reveal><i class="ph-fill ph-books" aria-hidden="true"></i>25 horas semanales</span>
+        </div>
+        <div class="hs__ctas" data-reveal>
+          <a class="btn btn--gold magnetic" href="admision.html?nivel=Kinder#solicitar">Solicitar vacante en Kinder <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost magnetic" href="#perfil">Ver el perfil</a>
+        </div>
+        <nav class="lv-switch" aria-label="Otros niveles" data-reveal><a href="kinder.html" aria-current="page">Kinder</a><a href="primaria.html">Primaria</a><a href="secundaria.html">Secundaria</a></nav>
+      </div>
+      <div class="phero__media">
+        <figure class="phero__photo" data-reveal="clip"><img src="assets/img/hero-kinder.webp" alt="Niñas y niños de Kinder con uniforme, sonriendo y con las manos en alto" width="1260" height="625" fetchpriority="high"></figure>
+        <p class="phero__sticker" data-reveal="scale"><i class="ph-fill ph-sparkle" aria-hidden="true"></i>Exploramos jugando</p>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 56 C 380 -14, 900 36, 1440 76 L1440 140 L0 140 Z" fill="#F1B300"/><path d="M0 82 C 380 12, 900 62, 1440 100 L1440 140 L0 140 Z" fill="#DE0612"/><path d="M0 92 C 380 30, 900 76, 1440 122 L1440 140 L0 140 Z" fill="#FFFFFF"/></svg>
+  </section>
+
+  <section class="sec" id="perfil" aria-labelledby="t-perfil">
+    <p class="ghost ghost--top" data-speed="0.25" data-axis="x" aria-hidden="true">Perfil</p>
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Perfil del estudiante</p>
+        <h2 class="h-sec" id="t-perfil" data-split>8 rasgos que <em>acompañamos</em></h2>
+        <p class="lead" data-reveal>Seleccione cada segmento de la rueda para conocer cómo crecen nuestros estudiantes de Kinder.</p>
+      </div>
+      <div class="profile" id="perfil-render" data-reveal="fade"></div>
+    </div>
+  </section>
+
+  <section class="sec sec--soft" id="plan" aria-labelledby="t-plan">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Plan curricular</p>
+        <h2 class="h-sec" id="t-plan" data-split>Áreas y horas <em>semanales</em></h2>
+      </div>
+      <div id="plan-render" data-reveal></div>
+    </div>
+  </section>
+
+  <section class="sec sec--grad on-dark" id="jornada" aria-labelledby="t-jornada">
+    <p class="ghost ghost--bottom" data-speed="-0.3" data-axis="x" aria-hidden="true">Jornada</p>
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow eyebrow--gold" data-reveal>Jornada escolar</p>
+        <h2 class="h-sec" id="t-jornada" data-split>Un año en <em>Kinder</em></h2>
+        <p class="lead" data-reveal>Fechas del calendario de Matrículas 2025. <span class="tbc tbc--dark">[POR CONFIRMAR: año lectivo vigente]</span></p>
+      </div>
+      <div class="day" data-stagger>
+        <div class="day-card" data-reveal><i class="ph-fill ph-clock" aria-hidden="true"></i><small>Horario de clases</small><b>8:30 a.m. – 1:00 p.m.</b></div>
+        <div class="day-card" data-reveal><i class="ph-fill ph-calendar-plus" aria-hidden="true"></i><small>Inicio de clases</small><b>6 de marzo</b></div>
+        <div class="day-card" data-reveal><i class="ph-fill ph-confetti" aria-hidden="true"></i><small>Último día de clases</small><b>21 de diciembre</b></div>
+      </div>
+      <a class="link-arrow" href="admision.html#calendario" style="margin-top:32px" data-reveal>Ver el calendario académico completo <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </section>
+
+  <section class="sec" id="inversion" aria-labelledby="t-inv">
+    <div class="container split-2">
+      <div>
+        <p class="eyebrow" data-reveal>Inversión educativa</p>
+        <h2 class="h-sec" id="t-inv" data-split>Inversión en <em>Kinder</em></h2>
+        <p class="lead" data-reveal>Montos publicados en Matrículas 2025. <span class="tbc">[POR CONFIRMAR: montos vigentes]</span></p>
+        <ul class="incl" data-reveal>
+          <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Incluye material educativo (pack de libros).</li>
+          <li><i class="ph-fill ph-x-circle" aria-hidden="true"></i>No incluye libro de inglés.</li>
+        </ul>
+        <a class="link-arrow" href="admision.html#requisitos" style="margin-top:20px" data-reveal>Ver requisitos de matrícula <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="price-duo" data-stagger>
+        <div class="price-tile" data-reveal="scale"><span>Matrícula</span><b><small>S/</small><span data-count="410">410</span></b></div>
+        <div class="price-tile" data-reveal="scale"><span>Mensualidad</span><b><small>S/</small><span data-count="410">410</span></b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--soft" aria-labelledby="t-otros">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Sigan explorando</p>
+        <h2 class="h-sec" id="t-otros" data-split>Conozca otros <em>niveles</em></h2>
+      </div>
+      <div class="others on-dark" data-stagger>
+        <a class="lvl" href="primaria.html" data-cursor="Ver" data-reveal>
+          <span class="lvl__img"><img src="assets/img/hero-primaria.webp" alt="" loading="lazy" decoding="async"></span>
+          <span class="lvl__n">02</span><span class="lvl__tag">8:05 a.m. – 1:45 p.m.</span>
+          <h3>Primaria</h3>
+          <span class="lvl__meta"><span><i class="ph-fill ph-student" aria-hidden="true"></i>1.º a 6.º grado</span><span><i class="ph-fill ph-books" aria-hidden="true"></i>35 horas semanales</span></span>
+          <span class="lvl__go">Conocer Primaria <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a class="lvl" href="secundaria.html" data-cursor="Ver" data-reveal>
+          <span class="lvl__img"><img src="assets/img/hero-secundaria.webp" alt="" loading="lazy" decoding="async"></span>
+          <span class="lvl__n">03</span><span class="lvl__tag">7:20 a.m. – 1:00 p.m.</span>
+          <h3>Secundaria</h3>
+          <span class="lvl__meta"><span><i class="ph-fill ph-student" aria-hidden="true"></i>1.º a 5.º año</span><span><i class="ph-fill ph-books" aria-hidden="true"></i>36 a 39 horas semanales</span></span>
+          <span class="lvl__go">Conocer Secundaria <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+  <section class="pre-footer" aria-labelledby="pf-title">
+    <div class="pre-footer__shapes" aria-hidden="true"><span class="shape shape--ring" data-speed="-0.08"></span><span class="shape shape--dot" data-speed="0.12"></span><span class="shape shape--sky" data-speed="0.05"></span></div>
+    <div class="container pre-footer__inner">
+      <p class="eyebrow eyebrow--gold" data-reveal>Empiece el camino</p>
+      <h2 id="pf-title" class="display" data-split>¿Listos para formar <em>parte?</em></h2>
+      <p class="pre-footer__lead" data-reveal>Le acompañamos en cada paso del proceso de admisión.</p>
+      <div class="pre-footer__ctas" data-reveal>
+        <a class="btn btn--gold magnetic" href="admision.html#solicitar">Solicitar vacante <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn--wa magnetic" href="https://wa.me/51994384050?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20la%20admisi%C3%B3n%20en%20%E2%80%9CLa%20Cat%C3%B3lica%E2%80%9D." target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Escríbanos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="64" height="64" class="brand__logo" loading="lazy">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <p class="lc-motto">“Formamos ciudadanos íntegros con una visión global.”</p>
+      </div>
+      <nav class="footer__col" aria-label="Explorar">
+        <h2 class="footer__h">Explore</h2>
+        <ul><li><a href="nosotros.html">Nosotros</a></li><li><a href="propuesta.html">Propuesta educativa</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li><li><a href="admision.html">Admisión</a></li></ul>
+      </nav>
+      <nav class="footer__col" aria-label="Niveles">
+        <h2 class="footer__h">Niveles</h2>
+        <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+      </nav>
+      <div class="footer__col">
+        <h2 class="footer__h">Contacto</h2>
+        <ul class="footer__contact">
+          <li><i class="ph-fill ph-map-pin" aria-hidden="true"></i><span>Jr. Tarapacá 634 <span class="tbc tbc--dark">[ciudad POR CONFIRMAR]</span></span></li>
+          <li><i class="ph-fill ph-phone" aria-hidden="true"></i><a href="tel:+51994384050">994 384 050</a></li>
+          <li><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><a href="https://wa.me/51994384050" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a></li>
+          <li class="socials__handle">@ieplacatolicape</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__giant" aria-hidden="true" data-speed="0.06">La Católica</p>
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> IEP “La Católica”. Todos los derechos reservados.</p>
+      <a href="#top" class="to-top">Volver arriba <i class="ph-fill ph-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+<!-- @end footer -->
+</body>
+</html>

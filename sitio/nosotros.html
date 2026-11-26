@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosotros · “La Católica” Institución Educativa Privada</title>
+  <meta name="description" content="Identidad, misión, visión y valores del colegio “La Católica”: Dios, Virtud y Sabiduría, y la familia Catolicista.">
+  <meta property="og:title" content="Nosotros · “La Católica”">
+  <meta property="og:description" content="Dios, Virtud y Sabiduría: conozca nuestra identidad, misión, visión y valores.">
+<!-- @include head -->
+  <meta name="theme-color" content="#002559">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="“La Católica” · Institución Educativa Privada">
+  <meta property="og:image" content="assets/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/brand/logo-lc-192.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="css/tokens.css?v=8">
+  <link rel="stylesheet" href="css/bundle.css?v=8">
+  <link rel="stylesheet" href="css/site.css?v=8">
+  <script>
+    /* Preferencia de movimiento: guardada por el visitante > sistema operativo. ?motion=on fuerza animaciones. */
+    (function (h) {
+      h.classList.add('js');
+      var m = null; try { m = localStorage.getItem('lc-motion'); } catch (e) {}
+      if (/[?&]motion=on/.test(location.search)) { m = 'full'; try { localStorage.setItem('lc-motion', 'full'); } catch (e) {} }
+      var reduced = m ? m === 'reduced' : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      h.classList.add(reduced ? 'motion-reduced' : 'motion-full');
+      var first = true; try { first = !sessionStorage.getItem('lc-visited'); sessionStorage.setItem('lc-visited', '1'); } catch (e) {}
+      if (first) h.classList.add('first-visit');
+      setTimeout(function () { h.classList.add('is-ready'); }, 4000);
+    })(document.documentElement);
+  </script>
+  <script src="js/data.js?v=8" defer></script>
+  <script src="js/app.js?v=8" defer></script>
+<!-- @end head -->
+</head>
+<body data-page="nosotros" id="top">
+<!-- @include header -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Telón de transición entre páginas + preloader -->
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__brand">
+      <img src="assets/brand/logo-lc-256.webp" alt="" width="88" height="88">
+      <span class="curtain__word">“La Católica”</span>
+      <span class="curtain__sub">Institución Educativa Privada</span>
+    </div>
+    <div class="curtain__bar"><span></span></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+
+  <div class="chrome">
+    <div class="topbar">
+      <div class="container topbar__row">
+        <a class="topbar__promo" href="admision.html#solicitar"><span class="pulse-dot" aria-hidden="true"></span>Admisión: solicite su vacante</a>
+        <div class="topbar__right">
+          <a href="tel:+51994384050"><i class="ph-fill ph-phone" aria-hidden="true"></i>994 384 050</a>
+          <a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a>
+          <button class="motion-toggle" type="button" aria-pressed="true" title="Activar o reducir las animaciones"><i class="ph-fill ph-sparkle" aria-hidden="true"></i><span>Animaciones</span><span class="motion-toggle__state">sí</span></button>
+        </div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container site-header__row">
+        <a class="brand" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="52" height="52" class="brand__logo">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" data-nav="inicio">Inicio</a></li>
+            <li><a href="nosotros.html" data-nav="nosotros">Nosotros</a></li>
+            <li class="has-drop">
+              <button class="drop-trigger" type="button" aria-expanded="false" aria-controls="drop-niveles" data-nav="niveles">Niveles <i class="ph-fill ph-caret-down" aria-hidden="true"></i></button>
+              <div class="drop" id="drop-niveles">
+                <a href="kinder.html" class="drop__item"><img src="assets/img/hero-kinder.webp" alt="" width="64" height="48" loading="lazy"><span><b>Kinder</b><small>Kinder I, II y III</small></span></a>
+                <a href="primaria.html" class="drop__item"><img src="assets/img/hero-primaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Primaria</b><small>1.º a 6.º grado</small></span></a>
+                <a href="secundaria.html" class="drop__item"><img src="assets/img/hero-secundaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Secundaria</b><small>1.º a 5.º año</small></span></a>
+              </div>
+            </li>
+            <li><a href="propuesta.html" data-nav="propuesta">Propuesta</a></li>
+            <li><a href="admision.html" data-nav="admision">Admisión</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--gold btn--sm header-cta" href="admision.html#solicitar">Solicitar vacante</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+          <span class="menu-btn__label">Menú</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Menú a pantalla completa -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+    <div class="menu__inner container">
+      <p class="eyebrow eyebrow--gold menu__eyebrow">Explore el colegio</p>
+      <div class="menu__groups">
+        <section class="menu__group">
+          <span class="menu__n">01</span>
+          <a class="menu__title" href="nosotros.html">Nuestro colegio <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="nosotros.html#identidad">Identidad</a></li><li><a href="nosotros.html#mision">Misión y visión</a></li><li><a href="nosotros.html#valores">Valores</a></li><li><a href="nosotros.html#familia">Familia Catolicista</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">02</span>
+          <span class="menu__title">Niveles</span>
+          <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">03</span>
+          <a class="menu__title" href="propuesta.html">Propuesta educativa <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="propuesta.html#principios">Principios educativos</a></li><li><a href="propuesta.html#servicios">Servicios de apoyo</a></li><li><a href="propuesta.html#talleres">Talleres</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">04</span>
+          <a class="menu__title" href="admision.html">Admisión <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="admision.html#inversion">Inversión</a></li><li><a href="admision.html#requisitos">Requisitos</a></li><li><a href="admision.html#calendario">Calendario</a></li><li><a href="admision.html#solicitar">Solicitar vacante</a></li></ul>
+        </section>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--gold" href="admision.html#solicitar">Solicitar vacante</a>
+        <a class="btn btn--ghost" href="https://wa.me/51994384050" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>994 384 050</a>
+        <p class="menu__contact"><i class="ph-fill ph-map-pin" aria-hidden="true"></i>Jr. Tarapacá 634 · @ieplacatolicape</p>
+      </div>
+    </div>
+  </div>
+<!-- @end header -->
+
+<main id="contenido">
+  <section class="phero on-dark" aria-labelledby="t-hero">
+    <span class="shape shape--soft" aria-hidden="true"></span>
+    <span class="shape shape--ring shape-float" data-speed="0.15" aria-hidden="true"></span>
+    <span class="shape shape--dot shape-float" data-speed="-0.2" aria-hidden="true"></span>
+    <p class="ghost ghost--bottom" data-speed="0.3" data-axis="x" aria-hidden="true">Identidad</p>
+    <div class="container phero__grid">
+      <div>
+        <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Nosotros</span></nav>
+        <p class="eyebrow eyebrow--gold" data-reveal>Nuestro colegio</p>
+        <h1 class="display" id="t-hero" data-split>Nuestra <em>identidad</em></h1>
+        <p class="lead" data-reveal>Somos un colegio católico privado con Kinder, Primaria y Secundaria. Formamos ciudadanos íntegros con una visión global.</p>
+        <div class="phero__chips" data-stagger>
+          <a class="chip" href="#identidad" data-reveal><i class="ph-fill ph-cross" aria-hidden="true"></i>Pilares</a>
+          <a class="chip" href="#mision" data-reveal><i class="ph-fill ph-target" aria-hidden="true"></i>Misión y visión</a>
+          <a class="chip" href="#valores" data-reveal><i class="ph-fill ph-seal-check" aria-hidden="true"></i>Valores</a>
+          <a class="chip" href="#familia" data-reveal><i class="ph-fill ph-users-three" aria-hidden="true"></i>Familia Catolicista</a>
+        </div>
+      </div>
+      <div class="phero__media">
+        <figure class="phero__photo" data-reveal="clip"><img src="assets/img/capilla.webp" alt="Estudiantes de secundaria con uniforme en la capilla del colegio" width="1753" height="640" fetchpriority="high"></figure>
+        <p class="phero__sticker" data-reveal="scale"><i class="ph-fill ph-hands-praying" aria-hidden="true"></i>Fe · Esperanza · Amor</p>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 56 C 380 -14, 900 36, 1440 76 L1440 140 L0 140 Z" fill="#F1B300"/><path d="M0 82 C 380 12, 900 62, 1440 100 L1440 140 L0 140 Z" fill="#DE0612"/><path d="M0 92 C 380 30, 900 76, 1440 122 L1440 140 L0 140 Z" fill="#FFFFFF"/></svg>
+  </section>
+
+  <!-- Pilares -->
+  <section class="sec" id="identidad" aria-labelledby="t-pilares">
+    <p class="ghost ghost--top" data-speed="0.25" data-axis="x" aria-hidden="true">Pilares</p>
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Nuestros pilares</p>
+        <h2 class="h-sec" id="t-pilares" data-split>Dios, Virtud y <em>Sabiduría</em></h2>
+      </div>
+      <div class="pillars" data-stagger>
+        <article class="pillar-card" data-reveal>
+          <span class="pillar-card__n" aria-hidden="true">01</span>
+          <div class="pillar-card__icon"><i class="ph-fill ph-cross" aria-hidden="true"></i></div>
+          <h3>Dios</h3>
+          <p>Fomentamos una educación basada en la fe y los principios cristianos. Inspiramos a nuestros estudiantes a vivir con amor, respeto y compasión.</p>
+        </article>
+        <article class="pillar-card" data-reveal>
+          <span class="pillar-card__n" aria-hidden="true">02</span>
+          <div class="pillar-card__icon"><i class="ph-fill ph-hand-heart" aria-hidden="true"></i></div>
+          <h3>Virtud</h3>
+          <p>Promovemos valores morales como la honestidad, la responsabilidad y la empatía para formar personas íntegras que tomen decisiones en beneficio del bien común y su entorno.</p>
+        </article>
+        <article class="pillar-card" data-reveal>
+          <span class="pillar-card__n" aria-hidden="true">03</span>
+          <div class="pillar-card__icon"><i class="ph-fill ph-book-open-text" aria-hidden="true"></i></div>
+          <h3>Sabiduría</h3>
+          <p>Fomentamos el amor por el conocimiento y el aprendizaje continuo, formando mentes críticas que crean soluciones innovadoras y desarrollan diversas inteligencias.</p>
+        </article>
+      </div>
+      <div class="quotes" data-stagger>
+        <blockquote class="bigquote" data-reveal="left">Cultivamos el amor al conocimiento y a Dios, formando estudiantes íntegros que sirven a la comunidad.”</blockquote>
+        <blockquote class="bigquote" data-reveal="right">Enseñamos que el verdadero aprendizaje se nutre de la fe, la esperanza y el amor hacia los demás.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión y visión con interruptor -->
+  <section class="sec sec--soft" id="mision" aria-labelledby="t-mv">
+    <span class="shape shape--sky shape-float" style="left:4%;top:16%" data-speed="0.2" aria-hidden="true"></span>
+    <span class="shape shape--gold shape-float" style="right:6%;bottom:12%" data-speed="-0.15" aria-hidden="true"></span>
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <p class="eyebrow eyebrow--center" data-reveal>Hacia dónde vamos</p>
+        <h2 class="h-sec" id="t-mv" data-split>Misión y <em>visión</em></h2>
+      </div>
+      <div class="seg-wrap" data-reveal>
+        <div class="seg" role="tablist" aria-label="Misión o visión" data-seg>
+          <button class="seg__btn" type="button" role="tab" id="tab-mision" aria-controls="panel-mision" aria-selected="true">Misión</button>
+          <button class="seg__btn" type="button" role="tab" id="tab-vision" aria-controls="panel-vision" aria-selected="false" tabindex="-1">Visión</button>
+        </div>
+      </div>
+      <div data-reveal="scale">
+        <article class="mv-card panel-swap" id="panel-mision" role="tabpanel" aria-labelledby="tab-mision">
+          <div class="mv-card__icon"><i class="ph-fill ph-target" aria-hidden="true"></i></div>
+          <div><h3>Misión</h3><p>Promover la formación integral de nuestros estudiantes, fortaleciendo su identidad a través de una educación innovadora, inclusiva y humanista, espiritual y ambiental. Buscando desarrollar en ellos habilidades creativas, asertivas y solidarias, capacitándolos para generar nuevos conocimientos y contribuir positivamente a su comunidad.</p></div>
+        </article>
+        <article class="mv-card panel-swap" id="panel-vision" role="tabpanel" aria-labelledby="tab-vision" hidden>
+          <div class="mv-card__icon"><i class="ph-fill ph-binoculars" aria-hidden="true"></i></div>
+          <div><h3>Visión</h3><p>Ser la institución educativa líder en nuestra región, destacada por ofrecer una educación de calidad que forme integralmente a los estudiantes, a través de docentes calificados que aplican métodos activos de enseñanza y promueven valores en colaboración con las familias.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="sec sec--navy on-dark" id="valores" aria-labelledby="t-valores">
+    <p class="ghost ghost--bottom" data-speed="-0.3" data-axis="x" aria-hidden="true">Valores</p>
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <p class="eyebrow eyebrow--gold eyebrow--center" data-reveal>Lo que vivimos cada día</p>
+        <h2 class="h-sec" id="t-valores" data-split>Nuestros <em>valores</em></h2>
+      </div>
+      <ul class="values-wall" data-stagger>
+        <li class="value-b" data-reveal><span class="value-b__circle"><i class="ph-fill ph-magnifying-glass" aria-hidden="true"></i></span><span class="value-b__label">Curiosidad</span></li>
+        <li class="value-b" data-reveal><span class="value-b__circle"><i class="ph-fill ph-compass" aria-hidden="true"></i></span><span class="value-b__label">Autonomía</span></li>
+        <li class="value-b" data-reveal><span class="value-b__circle"><i class="ph-fill ph-puzzle-piece" aria-hidden="true"></i></span><span class="value-b__label">Colaboración</span></li>
+        <li class="value-b" data-reveal><span class="value-b__circle"><i class="ph-fill ph-handshake" aria-hidden="true"></i></span><span class="value-b__label">Respeto</span></li>
+        <li class="value-b" data-reveal><span class="value-b__circle"><i class="ph-fill ph-seal-check" aria-hidden="true"></i></span><span class="value-b__label">Responsabilidad</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Familia Catolicista -->
+  <section class="sec" id="familia" aria-labelledby="t-familia">
+    <div class="container family-grid">
+      <div class="family-grid__intro">
+        <p class="eyebrow" data-reveal>Familia</p>
+        <h2 class="h-sec" id="t-familia" data-split>La familia en la comunidad <em>Catolicista</em></h2>
+        <p class="lead" data-reveal>En el colegio La Católica valoramos el papel de la familia como núcleo gestor fundamental del alumno y fortalecemos la relación entre el hogar y la institución, reconociendo que los mejores modelos para los hijos son sus propios padres. Por ello, vinculamos a los padres de familia desde inicial hasta secundaria, con el apoyo de ASOPADRES, en programas pedagógicos y recreativos.</p>
+      </div>
+      <div class="timeline" role="list" data-line>
+        <span class="timeline__line" aria-hidden="true"><span></span></span>
+        <div class="tl-item" role="listitem" data-line-item data-reveal="right"><span class="tl-item__n">1</span><h3>Formación en valores</h3><p>Ética, ciudadanía, servicio social.</p></div>
+        <div class="tl-item" role="listitem" data-line-item data-reveal="right"><span class="tl-item__n">2</span><h3>Intervención individual</h3><p>En grupos pequeños, por clases o en un mismo grado (día donde los padres explican su profesión).</p></div>
+        <div class="tl-item" role="listitem" data-line-item data-reveal="right"><span class="tl-item__n">3</span><h3>Temas educativos</h3><p>Mediante reuniones, talleres, escuela de padres y comunicaciones escritas.</p></div>
+        <div class="tl-item" role="listitem" data-line-item data-reveal="right"><span class="tl-item__n">4</span><h3>Pilares de Vida</h3><p>Desarrollo de valores morales y autoestima en los estudiantes: programa interactivo donde participan activamente los padres de familia de Primaria y Secundaria.</p></div>
+        <div class="tl-item" role="listitem" data-line-item data-reveal="right"><span class="tl-item__n">5</span><h3>Actividades informales y de integración</h3><p>Día de la Madre, Día del Padre, Noche de Talentos, Aniversario del colegio, Lectura en Familia (Inicial), Noche de integración (Primaria y Secundaria), entre otros.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+  <section class="pre-footer" aria-labelledby="pf-title">
+    <div class="pre-footer__shapes" aria-hidden="true"><span class="shape shape--ring" data-speed="-0.08"></span><span class="shape shape--dot" data-speed="0.12"></span><span class="shape shape--sky" data-speed="0.05"></span></div>
+    <div class="container pre-footer__inner">
+      <p class="eyebrow eyebrow--gold" data-reveal>Empiece el camino</p>
+      <h2 id="pf-title" class="display" data-split>¿Listos para formar <em>parte?</em></h2>
+      <p class="pre-footer__lead" data-reveal>Le acompañamos en cada paso del proceso de admisión.</p>
+      <div class="pre-footer__ctas" data-reveal>
+        <a class="btn btn--gold magnetic" href="admision.html#solicitar">Solicitar vacante <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn--wa magnetic" href="https://wa.me/51994384050?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20la%20admisi%C3%B3n%20en%20%E2%80%9CLa%20Cat%C3%B3lica%E2%80%9D." target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Escríbanos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="64" height="64" class="brand__logo" loading="lazy">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <p class="lc-motto">“Formamos ciudadanos íntegros con una visión global.”</p>
+      </div>
+      <nav class="footer__col" aria-label="Explorar">
+        <h2 class="footer__h">Explore</h2>
+        <ul><li><a href="nosotros.html">Nosotros</a></li><li><a href="propuesta.html">Propuesta educativa</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li><li><a href="admision.html">Admisión</a></li></ul>
+      </nav>
+      <nav class="footer__col" aria-label="Niveles">
+        <h2 class="footer__h">Niveles</h2>
+        <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+      </nav>
+      <div class="footer__col">
+        <h2 class="footer__h">Contacto</h2>
+        <ul class="footer__contact">
+          <li><i class="ph-fill ph-map-pin" aria-hidden="true"></i><span>Jr. Tarapacá 634 <span class="tbc tbc--dark">[ciudad POR CONFIRMAR]</span></span></li>
+          <li><i class="ph-fill ph-phone" aria-hidden="true"></i><a href="tel:+51994384050">994 384 050</a></li>
+          <li><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><a href="https://wa.me/51994384050" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a></li>
+          <li class="socials__handle">@ieplacatolicape</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__giant" aria-hidden="true" data-speed="0.06">La Católica</p>
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> IEP “La Católica”. Todos los derechos reservados.</p>
+      <a href="#top" class="to-top">Volver arriba <i class="ph-fill ph-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+<!-- @end footer -->
+</body>
+</html>

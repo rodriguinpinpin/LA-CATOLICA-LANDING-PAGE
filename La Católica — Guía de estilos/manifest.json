@@ -1,0 +1,130 @@
+{
+  "manifestVersion": 3,
+  "name": "La Católica — Guía de estilos",
+  "namespace": "LaCatolica",
+  "files": [
+    "assets/Graficos/README.md",
+    "assets/Logos/README.md",
+    "components/Button/README.md",
+    "components/Chip/README.md",
+    "components/DataTable/README.md",
+    "components/Gallery/README.md",
+    "components/Hero/README.md",
+    "components/NumberedItem/README.md",
+    "components/PillarCard/README.md",
+    "components/PriceCard/README.md",
+    "components/QuoteCard/README.md",
+    "components/SectionTitle/README.md",
+    "components/ServiceCard/README.md",
+    "components/ValueBadge/README.md",
+    "components/bundle.css",
+    "tokens.css"
+  ],
+  "libraries": [],
+  "components": [
+    {
+      "name": "Button",
+      "group": "Acciones",
+      "summary": "Botones de acción de la landing; el principal es amarillo institucional con texto azul."
+    },
+    {
+      "name": "Chip",
+      "group": "Acciones",
+      "summary": "Píldoras para niveles (Kinder, Primaria, Secundaria), fechas destacadas y filtros, y la pestaña grande .lc-tab (celeste sky-500, texto Bitter navy-900) para en…"
+    },
+    {
+      "name": "DataTable",
+      "group": "Datos",
+      "summary": "Tabla institucional para horarios, calendario académico y plan curricular."
+    },
+    {
+      "name": "Gallery",
+      "group": "Contenido",
+      "summary": "Grilla de infraestructura (Patio principal, Patio inicial, Área recreativa, Aulas de clase, Laboratorio de ciencias, Terraza, Laboratorio de cómputo, Bibliotec…"
+    },
+    {
+      "name": "Hero",
+      "group": "Estructura",
+      "summary": "Cabecera de la landing, tomada de las portadas: fondo degradado vertical blue-600 → navy-900, logo + wordmark arriba a la izquierda, nombre del nivel enorme en…"
+    },
+    {
+      "name": "NumberedItem",
+      "group": "Contenido",
+      "summary": "Lista numerada grande para programas (“La familia en la comunidad Catolicista”): número en Bitter 700 44px navy-800, título en Poppins 700 blue-600 y texto Pop…"
+    },
+    {
+      "name": "PillarCard",
+      "group": "Contenido",
+      "summary": "Tarjeta de los tres pilares institucionales — Dios, Virtud, Sabiduría — con ícono en círculo navy-800 que “engancha” un contorno redondeado."
+    },
+    {
+      "name": "PriceCard",
+      "group": "Datos",
+      "summary": "Monto de inversión educativa: cabecera blue-500 (texto navy-900) y cifra grande en Poppins 700 40px sobre surface-soft."
+    },
+    {
+      "name": "QuoteCard",
+      "group": "Contenido",
+      "summary": "Cita institucional en tarjeta surface-soft, esquinas radius-lg y una línea inferior blue-600 de 3px."
+    },
+    {
+      "name": "SectionTitle",
+      "group": "Estructura",
+      "summary": "Título de sección en dos líneas: una línea pequeña (kicker) y una línea fuerte (h2) en Bitter, color navy-800."
+    },
+    {
+      "name": "ServiceCard",
+      "group": "Contenido",
+      "summary": "Tarjeta de servicio: foto circular a la izquierda, título en mayúsculas de color de acento y texto descriptivo; fondo surface-soft, forma de píldora a la izqui…"
+    },
+    {
+      "name": "ValueBadge",
+      "group": "Contenido",
+      "summary": "Insignia de valor institucional: círculo gold-500 con ícono navy y etiqueta en píldora con borde dorado que se superpone al círculo."
+    }
+  ],
+  "assetGroups": [
+    {
+      "name": "Logos",
+      "order": [
+        "logo-lc.png"
+      ],
+      "files": [
+        {
+          "path": "assets/Logos/logo-lc.png",
+          "id": "982c49972ed11da461dd983651b03886"
+        }
+      ]
+    },
+    {
+      "name": "Graficos",
+      "tile": "l",
+      "order": [
+        "onda-divisoria.svg"
+      ],
+      "files": [
+        {
+          "path": "assets/Graficos/onda-divisoria.svg",
+          "id": "6ab90fb5c7f0019f4b973b8a3521c00c"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "files": {
+      "assets/Graficos/onda-divisoria.svg": {
+        "store": "blob",
+        "id": "6ab90fb5c7f0019f4b973b8a3521c00c",
+        "bytes": 352,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/logo-lc.png": {
+        "store": "blob",
+        "id": "982c49972ed11da461dd983651b03886",
+        "bytes": 373697,
+        "type": "image/png"
+      }
+    },
+    "blobBytesUsed": 374049
+  }
+}

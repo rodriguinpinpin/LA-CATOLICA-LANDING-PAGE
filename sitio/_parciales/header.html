@@ -1,0 +1,91 @@
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Telón de transición entre páginas + preloader -->
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__brand">
+      <img src="assets/brand/logo-lc-256.webp" alt="" width="88" height="88">
+      <span class="curtain__word">“La Católica”</span>
+      <span class="curtain__sub">Institución Educativa Privada</span>
+    </div>
+    <div class="curtain__bar"><span></span></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+
+  <div class="chrome">
+    <div class="topbar">
+      <div class="container topbar__row">
+        <a class="topbar__promo" href="admision.html#solicitar"><span class="pulse-dot" aria-hidden="true"></span>Admisión: solicite su vacante</a>
+        <div class="topbar__right">
+          <a href="tel:+51994384050"><i class="ph-fill ph-phone" aria-hidden="true"></i>994 384 050</a>
+          <a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a>
+          <button class="motion-toggle" type="button" aria-pressed="true" title="Activar o reducir las animaciones"><i class="ph-fill ph-sparkle" aria-hidden="true"></i><span>Animaciones</span><span class="motion-toggle__state">sí</span></button>
+        </div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container site-header__row">
+        <a class="brand" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="52" height="52" class="brand__logo">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" data-nav="inicio">Inicio</a></li>
+            <li><a href="nosotros.html" data-nav="nosotros">Nosotros</a></li>
+            <li class="has-drop">
+              <button class="drop-trigger" type="button" aria-expanded="false" aria-controls="drop-niveles" data-nav="niveles">Niveles <i class="ph-fill ph-caret-down" aria-hidden="true"></i></button>
+              <div class="drop" id="drop-niveles">
+                <a href="kinder.html" class="drop__item"><img src="assets/img/hero-kinder.webp" alt="" width="64" height="48" loading="lazy"><span><b>Kinder</b><small>Kinder I, II y III</small></span></a>
+                <a href="primaria.html" class="drop__item"><img src="assets/img/hero-primaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Primaria</b><small>1.º a 6.º grado</small></span></a>
+                <a href="secundaria.html" class="drop__item"><img src="assets/img/hero-secundaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Secundaria</b><small>1.º a 5.º año</small></span></a>
+              </div>
+            </li>
+            <li><a href="propuesta.html" data-nav="propuesta">Propuesta</a></li>
+            <li><a href="admision.html" data-nav="admision">Admisión</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--gold btn--sm header-cta" href="admision.html#solicitar">Solicitar vacante</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+          <span class="menu-btn__label">Menú</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Menú a pantalla completa -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+    <div class="menu__inner container">
+      <p class="eyebrow eyebrow--gold menu__eyebrow">Explore el colegio</p>
+      <div class="menu__groups">
+        <section class="menu__group">
+          <span class="menu__n">01</span>
+          <a class="menu__title" href="nosotros.html">Nuestro colegio <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="nosotros.html#identidad">Identidad</a></li><li><a href="nosotros.html#mision">Misión y visión</a></li><li><a href="nosotros.html#valores">Valores</a></li><li><a href="nosotros.html#familia">Familia Catolicista</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">02</span>
+          <span class="menu__title">Niveles</span>
+          <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">03</span>
+          <a class="menu__title" href="propuesta.html">Propuesta educativa <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="propuesta.html#principios">Principios educativos</a></li><li><a href="propuesta.html#servicios">Servicios de apoyo</a></li><li><a href="propuesta.html#talleres">Talleres</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">04</span>
+          <a class="menu__title" href="admision.html">Admisión <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="admision.html#inversion">Inversión</a></li><li><a href="admision.html#requisitos">Requisitos</a></li><li><a href="admision.html#calendario">Calendario</a></li><li><a href="admision.html#solicitar">Solicitar vacante</a></li></ul>
+        </section>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--gold" href="admision.html#solicitar">Solicitar vacante</a>
+        <a class="btn btn--ghost" href="https://wa.me/51994384050" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>994 384 050</a>
+        <p class="menu__contact"><i class="ph-fill ph-map-pin" aria-hidden="true"></i>Jr. Tarapacá 634 · @ieplacatolicape</p>
+      </div>
+    </div>
+  </div>

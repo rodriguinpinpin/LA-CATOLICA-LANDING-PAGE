@@ -1,0 +1,53 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>La Católica</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--navy-800); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .navy { fill:var(--navy-900); }
+  .blue { fill:var(--blue-600); }
+  .gold { fill:var(--gold-500); }
+  .red { fill:var(--red-600); }
+  .soft { fill:var(--surface-soft); }
+  .arc { fill:none; stroke:var(--gold-500); stroke-width:12; stroke-linecap:round; }
+  .arc.red { stroke:var(--red-600); fill:none; }
+  .arc.blue { stroke:var(--blue-500); fill:none; }
+  .blk { rx:var(--radius-lg); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-8); max-width:440px; }
+  .name { margin:0; font-family:var(--font-display); font-size:96px; line-height:.95; font-weight:800; color:var(--navy-800); letter-spacing:-.01em; }
+  .tag { margin:var(--space-2) 0 0 4px; font-size:14px; line-height:20px; font-style:italic; font-weight:600; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      navy-900 slab 240×320 bleeding top/bottom (identity blue, largest) · blue-600 168×144 · gold-500 168×120 · surface-soft disc · red-600 band — ≈45% of 960×288
+  arrangement one tall navy slab on the right with satellites stacked left of it (portada: azul dominante, amarillo como titular)
+  pattern     literal motif, from the logo's crossed rings and the yellow/red onda: three concentric quarter-arcs (gold, red, blue-500) drawn from the slab corner, 12px stroke
+  scales      gutters space-4 (16); sides space-6/space-8 multiples; corners radius-lg; arc spacing space-6 (24)
+-->
+<rect class="navy" x="240" y="-24" width="264" height="336"/>
+<rect class="blue blk" x="56" y="24" width="168" height="144"/>
+<rect class="gold blk" x="56" y="184" width="168" height="120"/>
+<rect class="red" x="240" y="248" width="264" height="16"/>
+<circle class="arc" cx="480" cy="0" r="96"/>
+<circle class="arc red" cx="480" cy="0" r="120"/>
+<circle class="arc blue" cx="480" cy="0" r="144"/>
+<circle class="gold" cx="360" cy="176" r="24"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">La<br>Católica</h1>
+<p class="tag">“Formamos ciudadanos íntegros con una visión global.”</p>
+</div>
+</div>
+</body>
+</html>

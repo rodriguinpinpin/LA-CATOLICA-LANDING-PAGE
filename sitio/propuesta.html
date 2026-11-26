@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta educativa · “La Católica” Institución Educativa Privada</title>
+  <meta name="description" content="Principios educativos, servicios de apoyo al aprendizaje, talleres extracurriculares e infraestructura del colegio “La Católica”.">
+  <meta property="og:title" content="Propuesta educativa · “La Católica”">
+  <meta property="og:description" content="Aprendizaje personalizado, educación inclusiva, enfoque STEAM y formación socioemocional, espiritual y física.">
+<!-- @include head -->
+  <meta name="theme-color" content="#002559">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="“La Católica” · Institución Educativa Privada">
+  <meta property="og:image" content="assets/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/brand/logo-lc-192.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="css/tokens.css?v=8">
+  <link rel="stylesheet" href="css/bundle.css?v=8">
+  <link rel="stylesheet" href="css/site.css?v=8">
+  <script>
+    /* Preferencia de movimiento: guardada por el visitante > sistema operativo. ?motion=on fuerza animaciones. */
+    (function (h) {
+      h.classList.add('js');
+      var m = null; try { m = localStorage.getItem('lc-motion'); } catch (e) {}
+      if (/[?&]motion=on/.test(location.search)) { m = 'full'; try { localStorage.setItem('lc-motion', 'full'); } catch (e) {} }
+      var reduced = m ? m === 'reduced' : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      h.classList.add(reduced ? 'motion-reduced' : 'motion-full');
+      var first = true; try { first = !sessionStorage.getItem('lc-visited'); sessionStorage.setItem('lc-visited', '1'); } catch (e) {}
+      if (first) h.classList.add('first-visit');
+      setTimeout(function () { h.classList.add('is-ready'); }, 4000);
+    })(document.documentElement);
+  </script>
+  <script src="js/data.js?v=8" defer></script>
+  <script src="js/app.js?v=8" defer></script>
+<!-- @end head -->
+</head>
+<body data-page="propuesta" id="top">
+<!-- @include header -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Telón de transición entre páginas + preloader -->
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__brand">
+      <img src="assets/brand/logo-lc-256.webp" alt="" width="88" height="88">
+      <span class="curtain__word">“La Católica”</span>
+      <span class="curtain__sub">Institución Educativa Privada</span>
+    </div>
+    <div class="curtain__bar"><span></span></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+
+  <div class="chrome">
+    <div class="topbar">
+      <div class="container topbar__row">
+        <a class="topbar__promo" href="admision.html#solicitar"><span class="pulse-dot" aria-hidden="true"></span>Admisión: solicite su vacante</a>
+        <div class="topbar__right">
+          <a href="tel:+51994384050"><i class="ph-fill ph-phone" aria-hidden="true"></i>994 384 050</a>
+          <a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a>
+          <button class="motion-toggle" type="button" aria-pressed="true" title="Activar o reducir las animaciones"><i class="ph-fill ph-sparkle" aria-hidden="true"></i><span>Animaciones</span><span class="motion-toggle__state">sí</span></button>
+        </div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container site-header__row">
+        <a class="brand" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="52" height="52" class="brand__logo">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" data-nav="inicio">Inicio</a></li>
+            <li><a href="nosotros.html" data-nav="nosotros">Nosotros</a></li>
+            <li class="has-drop">
+              <button class="drop-trigger" type="button" aria-expanded="false" aria-controls="drop-niveles" data-nav="niveles">Niveles <i class="ph-fill ph-caret-down" aria-hidden="true"></i></button>
+              <div class="drop" id="drop-niveles">
+                <a href="kinder.html" class="drop__item"><img src="assets/img/hero-kinder.webp" alt="" width="64" height="48" loading="lazy"><span><b>Kinder</b><small>Kinder I, II y III</small></span></a>
+                <a href="primaria.html" class="drop__item"><img src="assets/img/hero-primaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Primaria</b><small>1.º a 6.º grado</small></span></a>
+                <a href="secundaria.html" class="drop__item"><img src="assets/img/hero-secundaria.webp" alt="" width="64" height="48" loading="lazy"><span><b>Secundaria</b><small>1.º a 5.º año</small></span></a>
+              </div>
+            </li>
+            <li><a href="propuesta.html" data-nav="propuesta">Propuesta</a></li>
+            <li><a href="admision.html" data-nav="admision">Admisión</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--gold btn--sm header-cta" href="admision.html#solicitar">Solicitar vacante</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+          <span class="menu-btn__label">Menú</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Menú a pantalla completa -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+    <div class="menu__inner container">
+      <p class="eyebrow eyebrow--gold menu__eyebrow">Explore el colegio</p>
+      <div class="menu__groups">
+        <section class="menu__group">
+          <span class="menu__n">01</span>
+          <a class="menu__title" href="nosotros.html">Nuestro colegio <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="nosotros.html#identidad">Identidad</a></li><li><a href="nosotros.html#mision">Misión y visión</a></li><li><a href="nosotros.html#valores">Valores</a></li><li><a href="nosotros.html#familia">Familia Catolicista</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">02</span>
+          <span class="menu__title">Niveles</span>
+          <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">03</span>
+          <a class="menu__title" href="propuesta.html">Propuesta educativa <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="propuesta.html#principios">Principios educativos</a></li><li><a href="propuesta.html#servicios">Servicios de apoyo</a></li><li><a href="propuesta.html#talleres">Talleres</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li></ul>
+        </section>
+        <section class="menu__group">
+          <span class="menu__n">04</span>
+          <a class="menu__title" href="admision.html">Admisión <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+          <ul><li><a href="admision.html#inversion">Inversión</a></li><li><a href="admision.html#requisitos">Requisitos</a></li><li><a href="admision.html#calendario">Calendario</a></li><li><a href="admision.html#solicitar">Solicitar vacante</a></li></ul>
+        </section>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--gold" href="admision.html#solicitar">Solicitar vacante</a>
+        <a class="btn btn--ghost" href="https://wa.me/51994384050" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>994 384 050</a>
+        <p class="menu__contact"><i class="ph-fill ph-map-pin" aria-hidden="true"></i>Jr. Tarapacá 634 · @ieplacatolicape</p>
+      </div>
+    </div>
+  </div>
+<!-- @end header -->
+
+<main id="contenido">
+  <section class="phero on-dark" aria-labelledby="t-hero">
+    <span class="shape shape--soft" aria-hidden="true"></span>
+    <span class="shape shape--ring shape-float" data-speed="0.15" aria-hidden="true"></span>
+    <span class="shape shape--dot shape-float" data-speed="-0.2" aria-hidden="true"></span>
+    <p class="ghost ghost--bottom" data-speed="0.3" data-axis="x" aria-hidden="true">Propuesta</p>
+    <div class="container phero__grid">
+      <div>
+        <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Propuesta educativa</span></nav>
+        <p class="eyebrow eyebrow--gold" data-reveal>Cómo enseñamos</p>
+        <h1 class="display" id="t-hero" data-split>Propuesta <em>educativa</em></h1>
+        <p class="lead" data-reveal>Principios, servicios y espacios que acompañan a cada estudiante dentro y fuera del aula.</p>
+        <div class="phero__chips" data-stagger>
+          <a class="chip" href="#principios" data-reveal><i class="ph-fill ph-compass" aria-hidden="true"></i>Principios</a>
+          <a class="chip" href="#servicios" data-reveal><i class="ph-fill ph-lifebuoy" aria-hidden="true"></i>Servicios de apoyo</a>
+          <a class="chip" href="#talleres" data-reveal><i class="ph-fill ph-soccer-ball" aria-hidden="true"></i>Talleres</a>
+          <a class="chip" href="#infraestructura" data-reveal><i class="ph-fill ph-buildings" aria-hidden="true"></i>Infraestructura</a>
+        </div>
+      </div>
+      <div class="phero__mosaic" aria-hidden="true">
+        <figure data-reveal="clip"><img src="assets/img/infra-lab-ciencias.webp" alt="" loading="eager"></figure>
+        <figure data-reveal="clip" style="--d:120ms"><img src="assets/img/infra-biblioteca.webp" alt=""></figure>
+        <figure data-reveal="clip" style="--d:240ms"><img src="assets/img/infra-lab-computo.webp" alt=""></figure>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 56 C 380 -14, 900 36, 1440 76 L1440 140 L0 140 Z" fill="#F1B300"/><path d="M0 82 C 380 12, 900 62, 1440 100 L1440 140 L0 140 Z" fill="#DE0612"/><path d="M0 92 C 380 30, 900 76, 1440 122 L1440 140 L0 140 Z" fill="#FFFFFF"/></svg>
+  </section>
+
+  <!-- Principios -->
+  <section class="sec" id="principios" aria-labelledby="t-principios">
+    <p class="ghost ghost--top" data-speed="0.25" data-axis="x" aria-hidden="true">Principios</p>
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Lo que guía cada clase</p>
+        <h2 class="h-sec" id="t-principios" data-split>Principios <em>educativos</em></h2>
+      </div>
+      <div class="principles" data-stagger>
+        <article class="principle" style="--c:#B35300" data-reveal>
+          <span class="principle__n" aria-hidden="true">01</span>
+          <span class="principle__icon"><i class="ph-fill ph-chalkboard-teacher" aria-hidden="true"></i></span>
+          <div><h3>Aprendizaje personalizado</h3><p>El desarrollo del estudiante debe responder a sus intereses, ritmos y estilos de aprendizaje, con apoyo constante de docentes y tecnologías.</p></div>
+        </article>
+        <article class="principle" style="--c:#9654B4" data-reveal>
+          <span class="principle__n" aria-hidden="true">02</span>
+          <span class="principle__icon"><i class="ph-fill ph-puzzle-piece" aria-hidden="true"></i></span>
+          <div><h3>Educación inclusiva y equitativa</h3><p>Todos los estudiantes, sin importar sus capacidades, género, cultura o contexto, tienen derecho a una educación de calidad adaptada a sus necesidades.</p></div>
+        </article>
+        <article class="principle" style="--c:#007A36" data-reveal>
+          <span class="principle__n" aria-hidden="true">03</span>
+          <span class="principle__icon"><i class="ph-fill ph-palette" aria-hidden="true"></i></span>
+          <div><h3>Enfoque STEAM y Artes</h3><p>Integración de las ciencias, la tecnología, el arte, la creatividad y las disciplinas deportivas para desarrollar habilidades necesarias para el futuro.</p></div>
+        </article>
+        <article class="principle" style="--c:#0070B7" data-reveal>
+          <span class="principle__n" aria-hidden="true">04</span>
+          <span class="principle__icon"><i class="ph-fill ph-heart" aria-hidden="true"></i></span>
+          <div><h3>Formación socioemocional, espiritual y física</h3><p>El bienestar emocional, espiritual y físico es crucial para un aprendizaje efectivo, fomentando una cultura escolar de cuidado, respeto, disciplina y equilibrio.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios de apoyo -->
+  <section class="sec sec--soft" id="servicios" aria-labelledby="t-servicios">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Servicios de apoyo</p>
+        <h2 class="h-sec" id="t-servicios" data-split>Acompañamos cada <em>aprendizaje</em></h2>
+      </div>
+      <div class="services" data-stagger>
+        <article class="svc" style="--accent:var(--accent-orange);--accent-text:var(--accent-orange-text)" data-reveal>
+          <span class="svc__photo"><img src="assets/img/serv-recursos.webp" alt="Docente acompañando a una estudiante que escribe en su cuaderno" loading="lazy"></span>
+          <div><h3>Recursos para el aprendizaje<span>Learning Resources</span></h3><p>Se apoya a estudiantes de primaria y secundaria con dificultades de aprendizaje, mejorando sus habilidades académicas. También se ofrecen clases de refuerzo los sábados.</p></div>
+        </article>
+        <article class="svc" style="--accent:var(--accent-purple);--accent-text:var(--accent-purple)" data-reveal>
+          <span class="svc__photo"><img src="assets/img/serv-psicometria.webp" alt="Psicóloga conversando con una estudiante" loading="lazy"></span>
+          <div><h3>Psicometría</h3><p>El equipo de pedagogía y psicología evalúa a los estudiantes para identificar fortalezas y áreas de mejora, y diseñar un plan de intervención con apoyos internos y derivaciones a especialistas.</p></div>
+        </article>
+        <article class="svc" style="--accent:var(--accent-green);--accent-text:var(--accent-green-text)" data-reveal>
+          <span class="svc__photo"><img src="assets/img/serv-lectura.webp" alt="Docente apoyando a una niña de primaria en lectura" loading="lazy"></span>
+          <div><h3>Apoyo de lectura<span>Reading Resource</span></h3><p>Ofrece apoyo en pequeños grupos para estudiantes de los primeros grados de primaria que necesitan nivelación en lectura y escritura o enfrentan dificultades de aprendizaje.</p></div>
+        </article>
+        <article class="svc" style="--accent:var(--blue-500);--accent-text:var(--blue-600)" data-reveal>
+          <span class="svc__photo"><img src="assets/img/serv-habilidades.webp" alt="Estudiantes con mandil presentando un proyecto de ciencias" loading="lazy"></span>
+          <div><h3>Apoyo de habilidades especiales<span>Optimal Match</span></h3><p>Se potencia el talento de estudiantes de primaria excepcionales mediante actividades de investigación y proyectos creativos.</p></div>
+        </article>
+        <article class="svc" style="--accent:var(--navy-800);--accent-text:var(--navy-800)" data-reveal>
+          <span class="svc__photo"><img src="assets/img/serv-salud.webp" alt="Personal de tópico atendiendo a un estudiante" loading="lazy"></span>
+          <div><h3>Programa de salud</h3><p><span class="tbc">[POR CONFIRMAR: el brochure repite aquí el texto de “Recursos para el aprendizaje”; falta la descripción del programa de salud]</span></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talleres -->
+  <section class="sec sec--navy on-dark" id="talleres" aria-labelledby="t-talleres">
+    <p class="ghost ghost--bottom" data-speed="-0.3" data-axis="x" aria-hidden="true">Talleres</p>
+    <span class="shape shape--ring shape-float" style="right:5%;top:10%;width:120px;height:120px" aria-hidden="true"></span>
+    <div class="container wk">
+      <div>
+        <p class="eyebrow eyebrow--gold" data-reveal>Un enfoque que trasciende el aula</p>
+        <h2 class="h-sec" id="t-talleres" data-split>Talleres <em>extracurriculares</em></h2>
+        <p class="lead" data-reveal>Valor agregado de nuestro servicio educativo: deporte, cultura y concursos para descubrir talentos.</p>
+        <div style="margin-top:32px" data-reveal>
+          <div class="seg" role="tablist" aria-label="Tipo de taller" data-seg>
+            <button class="seg__btn" type="button" role="tab" id="tab-dep" aria-controls="panel-dep" aria-selected="true">Deportivos</button>
+            <button class="seg__btn" type="button" role="tab" id="tab-cul" aria-controls="panel-cul" aria-selected="false" tabindex="-1">Culturales</button>
+            <button class="seg__btn" type="button" role="tab" id="tab-con" aria-controls="panel-con" aria-selected="false" tabindex="-1">Concursos</button>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="right">
+        <ul class="wk__list panel-swap" id="panel-dep" role="tabpanel" aria-labelledby="tab-dep">
+          <li class="wk__item"><i class="ph-fill ph-soccer-ball" aria-hidden="true"></i>Fútbol</li>
+          <li class="wk__item"><i class="ph-fill ph-volleyball" aria-hidden="true"></i>Vóley mixto</li>
+          <li class="wk__item"><i class="ph-fill ph-person-simple-run" aria-hidden="true"></i>Zumba</li>
+        </ul>
+        <ul class="wk__list panel-swap" id="panel-cul" role="tabpanel" aria-labelledby="tab-cul" hidden>
+          <li class="wk__item"><i class="ph-fill ph-palette" aria-hidden="true"></i>Dibujo y pintura</li>
+          <li class="wk__item"><i class="ph-fill ph-music-notes" aria-hidden="true"></i>Música</li>
+          <li class="wk__item"><i class="ph-fill ph-mask-happy" aria-hidden="true"></i>Danza tradicional</li>
+          <li class="wk__item"><i class="ph-fill ph-microphone-stage" aria-hidden="true"></i>Oratoria y liderazgo</li>
+        </ul>
+        <ul class="wk__list panel-swap" id="panel-con" role="tabpanel" aria-labelledby="tab-con" hidden>
+          <li class="wk__item"><i class="ph-fill ph-trophy" aria-hidden="true"></i>Concursos escolares nacionales</li>
+          <li class="wk__item"><i class="ph-fill ph-medal" aria-hidden="true"></i>Frijolito del saber</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acompañamiento -->
+  <section class="sec" aria-labelledby="t-acomp">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Siempre presentes</p>
+        <h2 class="h-sec" id="t-acomp" data-split>Acompañamiento <em>integral</em></h2>
+      </div>
+      <div class="support" data-stagger>
+        <article class="support__card" data-reveal>
+          <i class="ph-fill ph-student" aria-hidden="true"></i>
+          <h3>Reforzamiento académico</h3>
+          <ul class="ticks"><li>Programa académico</li><li>Reforzamiento personalizado</li><li>Materiales educativos</li></ul>
+        </article>
+        <article class="support__card" data-reveal>
+          <i class="ph-fill ph-lifebuoy" aria-hidden="true"></i>
+          <h3>Acompañamiento y soporte estudiantil</h3>
+          <ul class="ticks"><li>Reporte académico de avance y bimestrales.</li><li>Protocolo de acompañamiento y seguimiento a estudiantes en riesgo.</li><li>Acompañamiento psicológico permanente.</li><li>Talleres socioeducativos.</li></ul>
+        </article>
+        <article class="support__card" data-reveal>
+          <i class="ph-fill ph-users-three" aria-hidden="true"></i>
+          <h3>Participación de la familia</h3>
+          <ul class="ticks"><li>Comunicación continua y efectiva.</li><li>Escuela de padres y formación familiar.</li><li>Actividades deportivas.</li></ul>
+        </article>
+      </div>
+      <h3 class="h-sec" style="font-size:clamp(22px,2.4vw,30px);margin:72px 0 24px" data-reveal>Dirección de Servicio de Apoyo Educativo</h3>
+      <ul class="depts" data-stagger>
+        <li data-reveal>Servicio Psicopedagógico</li><li data-reveal>Departamento de Conducta</li><li data-reveal>Servicio Social y Familiar</li><li data-reveal>Departamento de Tópico</li><li data-reveal>Departamento Pastoral y Proyección Social</li><li data-reveal>Departamento de Responsabilidad Social y Desarrollo Sostenible</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Infraestructura -->
+  <section class="sec sec--soft" id="infraestructura" aria-labelledby="t-infra">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow" data-reveal>Espacios para descubrir</p>
+        <h2 class="h-sec" id="t-infra" data-split>Nuestra <em>infraestructura</em></h2>
+        <p class="lead" data-reveal>Seleccione una foto para verla más grande.</p>
+      </div>
+      <ul class="gallery" data-stagger>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="0" data-cursor="Ver"><img src="assets/img/infra-patio-principal.webp" alt="Patio principal con césped sintético y estudiantes en educación física" loading="lazy"><span class="gallery__tag">Patio principal</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="1" data-cursor="Ver"><img src="assets/img/infra-patio-inicial.webp" alt="Patio de inicial con módulos de espuma de colores" loading="lazy"><span class="gallery__tag">Patio inicial</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="2" data-cursor="Ver"><img src="assets/img/infra-area-recreativa.webp" alt="Área recreativa con juegos y toboganes" loading="lazy"><span class="gallery__tag">Área recreativa</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="3" data-cursor="Ver"><img src="assets/img/infra-aulas.webp" alt="Aula de clase con estudiantes atendiendo al docente" loading="lazy"><span class="gallery__tag">Aulas de clase</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="4" data-cursor="Ver"><img src="assets/img/infra-lab-ciencias.webp" alt="Laboratorio de ciencias con estudiantes en mandil blanco" loading="lazy"><span class="gallery__tag">Laboratorio de ciencias</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="5" data-cursor="Ver"><img src="assets/img/infra-terraza.webp" alt="Terraza techada con césped sintético" loading="lazy"><span class="gallery__tag">Terraza</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="6" data-cursor="Ver"><img src="assets/img/infra-lab-computo.webp" alt="Laboratorio de cómputo con estudiantes frente a las computadoras" loading="lazy"><span class="gallery__tag">Laboratorio de cómputo</span></button></li>
+        <li data-reveal="clip"><button class="gallery__item" type="button" data-lightbox="7" data-cursor="Ver"><img src="assets/img/infra-biblioteca.webp" alt="Biblioteca con estantes azules llenos de libros" loading="lazy"><span class="gallery__tag">Biblioteca</span></button></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<dialog class="lightbox" aria-label="Galería de infraestructura">
+  <figure class="lightbox__fig"><img src="" alt="" class="lightbox__img"><figcaption class="lightbox__cap"></figcaption></figure>
+  <button class="lightbox__btn lightbox__close" type="button" aria-label="Cerrar"><i class="ph-fill ph-x" aria-hidden="true"></i></button>
+  <button class="lightbox__btn lightbox__prev" type="button" aria-label="Foto anterior"><i class="ph-fill ph-caret-left" aria-hidden="true"></i></button>
+  <button class="lightbox__btn lightbox__next" type="button" aria-label="Foto siguiente"><i class="ph-fill ph-caret-right" aria-hidden="true"></i></button>
+</dialog>
+
+<!-- @include footer -->
+  <section class="pre-footer" aria-labelledby="pf-title">
+    <div class="pre-footer__shapes" aria-hidden="true"><span class="shape shape--ring" data-speed="-0.08"></span><span class="shape shape--dot" data-speed="0.12"></span><span class="shape shape--sky" data-speed="0.05"></span></div>
+    <div class="container pre-footer__inner">
+      <p class="eyebrow eyebrow--gold" data-reveal>Empiece el camino</p>
+      <h2 id="pf-title" class="display" data-split>¿Listos para formar <em>parte?</em></h2>
+      <p class="pre-footer__lead" data-reveal>Le acompañamos en cada paso del proceso de admisión.</p>
+      <div class="pre-footer__ctas" data-reveal>
+        <a class="btn btn--gold magnetic" href="admision.html#solicitar">Solicitar vacante <i class="ph-fill ph-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn--wa magnetic" href="https://wa.me/51994384050?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20la%20admisi%C3%B3n%20en%20%E2%80%9CLa%20Cat%C3%B3lica%E2%80%9D." target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Escríbanos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="index.html" aria-label="“La Católica”, ir al inicio">
+          <img src="assets/brand/logo-lc-192.png" alt="" width="64" height="64" class="brand__logo" loading="lazy">
+          <span class="brand__text"><b>“La Católica”</b><small>Institución Educativa Privada</small></span>
+        </a>
+        <p class="lc-motto">“Formamos ciudadanos íntegros con una visión global.”</p>
+      </div>
+      <nav class="footer__col" aria-label="Explorar">
+        <h2 class="footer__h">Explore</h2>
+        <ul><li><a href="nosotros.html">Nosotros</a></li><li><a href="propuesta.html">Propuesta educativa</a></li><li><a href="propuesta.html#infraestructura">Infraestructura</a></li><li><a href="admision.html">Admisión</a></li></ul>
+      </nav>
+      <nav class="footer__col" aria-label="Niveles">
+        <h2 class="footer__h">Niveles</h2>
+        <ul><li><a href="kinder.html">Kinder</a></li><li><a href="primaria.html">Primaria</a></li><li><a href="secundaria.html">Secundaria</a></li></ul>
+      </nav>
+      <div class="footer__col">
+        <h2 class="footer__h">Contacto</h2>
+        <ul class="footer__contact">
+          <li><i class="ph-fill ph-map-pin" aria-hidden="true"></i><span>Jr. Tarapacá 634 <span class="tbc tbc--dark">[ciudad POR CONFIRMAR]</span></span></li>
+          <li><i class="ph-fill ph-phone" aria-hidden="true"></i><a href="tel:+51994384050">994 384 050</a></li>
+          <li><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><a href="https://wa.me/51994384050" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a></li>
+          <li class="socials__handle">@ieplacatolicape</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__giant" aria-hidden="true" data-speed="0.06">La Católica</p>
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> IEP “La Católica”. Todos los derechos reservados.</p>
+      <a href="#top" class="to-top">Volver arriba <i class="ph-fill ph-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+<!-- @end footer -->
+</body>
+</html>
