@@ -14,20 +14,6 @@
   var EASE_OUT = 'cubic-bezier(0.23, 1, 0.32, 1)';
   function full() { return html.classList.contains('motion-full'); }
 
-  /* ---------- Preferencia de movimiento (botón en la barra superior) ---------- */
-  var toggle = $('.motion-toggle');
-  function syncToggle() {
-    if (!toggle) return;
-    toggle.setAttribute('aria-pressed', String(full()));
-    $('.motion-toggle__state', toggle).textContent = full() ? 'sí' : 'no';
-  }
-  syncToggle();
-  if (toggle) toggle.addEventListener('click', function () {
-    var next = full() ? 'reduced' : 'full';
-    try { localStorage.setItem('lc-motion', next); } catch (e) {}
-    location.reload();
-  });
-
   /* ---------- Año, página actual ---------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
   var page = body.getAttribute('data-page');
@@ -595,7 +581,7 @@
     }).join('');
     var foot = '<tfoot><tr><th colspan="2" scope="row">Total de horas semanales</th>' + lv.totals.map(function (t) { return '<td>' + t + '</td>'; }).join('') + '</tr></tfoot>';
     planBox.innerHTML = '<div class="table-wrap" tabindex="0" role="region" aria-label="Plan curricular de ' + lv.name + ' (desplazable)"><table class="lc-table plan-table"><caption>Plan curricular · horas semanales</caption>' + head + '<tbody>' + rows + '</tbody>' + foot + '</table></div>' +
-      '<p class="plan-note">Fuente: brochure Matrículas 2025. ' + (lv.totalsNote ? withTbc(lv.totalsNote) : '') + '</p>';
+      '<p class="plan-note">Fuente: brochure Matrículas 2027. ' + (lv.totalsNote ? withTbc(lv.totalsNote) : '') + '</p>';
   }
 
   /* ---------- Lightbox de infraestructura ---------- */

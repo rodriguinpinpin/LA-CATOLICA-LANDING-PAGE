@@ -28,7 +28,7 @@
         { t: 'Curioso e inquisitivo', d: 'Interés por descubrir el mundo, formulando preguntas y explorando a través del juego y la observación.', c: C.red, i: 'magnifying-glass' },
         { t: 'Desarrollo de la imaginación y creatividad', d: 'Participación en actividades artísticas y juegos simbólicos que estimulan el pensamiento divergente.', c: C.green, i: 'lightbulb' },
         { t: 'Exposición inicial al inglés', d: 'Introducción lúdica al inglés a través de canciones y juegos, fomentando un oído receptivo.', c: C.lgreen, i: 'globe-hemisphere-west' },
-        { t: 'Desarrollo de habilidades artísticas', d: 'Exploración de distintas expresiones artísticas (dibujo, pintura y música) para fomentar la creatividad. [POR CONFIRMAR: el texto del brochure está cortado]', c: C.blue5, i: 'palette' },
+        { t: 'Desarrollo de habilidades artísticas', d: 'Exploración de distintas expresiones artísticas (dibujo, pintura y música) para fomentar la creatividad.', c: C.blue5, i: 'palette' },
         { t: 'Introducción a la actividad física', d: 'Desarrolla habilidades motrices básicas mediante juegos, promoviendo la importancia de la actividad física.', c: C.purple, i: 'person-simple-run' },
         { t: 'Desarrollo de la fe', d: 'Desarrollo de espiritualidad y valores fundamentales, promoviendo el respeto y la gratitud.', c: C.slate, i: 'hands-praying' },
         { t: 'Competencia socioemocional', d: 'Habilidades para reconocer y gestionar emociones, interactuar con otros y comprender normas de convivencia.', c: C.gold, i: 'smiley', dark: true },
@@ -89,7 +89,6 @@
         { area: 'Competencias transversales', color: C.teal, rows: [['Desarrollo de la autonomía', { v: '—', cs: 'all' }], ['Investigación y sustentación de paper', { v: '—', cs: 'all' }]] }
       ],
       totals: [36, 36, 36, 39, 39],
-      totalsNote: '[POR CONFIRMAR: en 4.º y 5.º la suma de horas del brochure da 40, pero el total impreso es 39]',
       profile: [
         { t: 'Pensador crítico y analítico', d: 'Capacidad para analizar y evaluar información de manera crítica, aplicando pensamiento científico.', c: C.red, i: 'magnifying-glass' },
         { t: 'Liderazgo y trabajo en equipo', d: 'Habilidades de liderazgo colaborativo, fomentando inclusión y respeto mutuo.', c: C.green, i: 'users-three' },

@@ -21,24 +21,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="css/tokens.css?v=9">
-  <link rel="stylesheet" href="css/bundle.css?v=9">
-  <link rel="stylesheet" href="css/site.css?v=9">
+  <link rel="stylesheet" href="css/tokens.css?v=10">
+  <link rel="stylesheet" href="css/bundle.css?v=10">
+  <link rel="stylesheet" href="css/site.css?v=10">
   <script>
-    /* Preferencia de movimiento: guardada por el visitante > sistema operativo. ?motion=on fuerza animaciones. */
+    /* Movimiento: sigue la preferencia del sistema operativo. ?motion=on fuerza animaciones (solo esa visita). */
     (function (h) {
       h.classList.add('js');
-      var m = null; try { m = localStorage.getItem('lc-motion'); } catch (e) {}
-      if (/[?&]motion=on/.test(location.search)) { m = 'full'; try { localStorage.setItem('lc-motion', 'full'); } catch (e) {} }
-      var reduced = m ? m === 'reduced' : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var reduced = !/[?&]motion=on/.test(location.search) && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       h.classList.add(reduced ? 'motion-reduced' : 'motion-full');
       var first = true; try { first = !sessionStorage.getItem('lc-visited'); sessionStorage.setItem('lc-visited', '1'); } catch (e) {}
       if (first) h.classList.add('first-visit');
       setTimeout(function () { h.classList.add('is-ready'); }, 4000);
     })(document.documentElement);
   </script>
-  <script src="js/data.js?v=9" defer></script>
-  <script src="js/app.js?v=9" defer></script>
+  <script src="js/data.js?v=10" defer></script>
+  <script src="js/app.js?v=10" defer></script>
 <!-- @end head -->
 </head>
 <body data-page="kinder" data-level="kinder" id="top">
@@ -66,7 +64,6 @@
           <a href="tel:+51994384050"><i class="ph-fill ph-phone" aria-hidden="true"></i>994 384 050</a>
           <a href="https://www.facebook.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Facebook @ieplacatolicape"><i class="ph-fill ph-facebook-logo" aria-hidden="true"></i></a>
           <a href="https://www.instagram.com/ieplacatolicape" target="_blank" rel="noopener" aria-label="Instagram @ieplacatolicape"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i></a>
-          <button class="motion-toggle" type="button" aria-pressed="true" title="Activar o reducir las animaciones"><i class="ph-fill ph-sparkle" aria-hidden="true"></i><span>Animaciones</span><span class="motion-toggle__state">sí</span></button>
         </div>
       </div>
     </div>
@@ -196,7 +193,7 @@
       <div class="sec-head">
         <p class="eyebrow eyebrow--gold" data-reveal>Jornada escolar</p>
         <h2 class="h-sec" id="t-jornada" data-split>Un año en <em>Kinder</em></h2>
-        <p class="lead" data-reveal>Fechas del calendario de Matrículas 2025. <span class="tbc tbc--dark">[POR CONFIRMAR: año lectivo vigente]</span></p>
+        <p class="lead" data-reveal>Fechas del calendario de Matrículas 2027.</p>
       </div>
       <div class="day" data-stagger>
         <div class="day-card" data-reveal><i class="ph-fill ph-clock" aria-hidden="true"></i><small>Horario de clases</small><b>8:30 a.m. – 1:00 p.m.</b></div>
@@ -212,7 +209,7 @@
       <div>
         <p class="eyebrow" data-reveal>Inversión educativa</p>
         <h2 class="h-sec" id="t-inv" data-split>Inversión en <em>Kinder</em></h2>
-        <p class="lead" data-reveal>Montos publicados en Matrículas 2025. <span class="tbc">[POR CONFIRMAR: montos vigentes]</span></p>
+        <p class="lead" data-reveal>Montos publicados en Matrículas 2027.</p>
         <ul class="incl" data-reveal>
           <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Incluye material educativo (pack de libros).</li>
           <li><i class="ph-fill ph-x-circle" aria-hidden="true"></i>No incluye libro de inglés.</li>
@@ -286,7 +283,7 @@
       <div class="footer__col">
         <h2 class="footer__h">Contacto</h2>
         <ul class="footer__contact">
-          <li><i class="ph-fill ph-map-pin" aria-hidden="true"></i><span>Jr. Tarapacá 634 <span class="tbc tbc--dark">[ciudad POR CONFIRMAR]</span></span></li>
+          <li><i class="ph-fill ph-map-pin" aria-hidden="true"></i><span>Jr. Tarapacá 634, Cajamarca, Cajamarca</span></li>
           <li><i class="ph-fill ph-phone" aria-hidden="true"></i><a href="tel:+51994384050">994 384 050</a></li>
           <li><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><a href="https://wa.me/51994384050" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>

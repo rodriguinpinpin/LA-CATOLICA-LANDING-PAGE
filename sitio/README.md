@@ -23,7 +23,6 @@ python -m http.server 5510 --directory sitio
 - **Interacción y animaciones**: `js/app.js` (sin dependencias).
 
 ## Animaciones
-- Si el sistema operativo pide “movimiento reducido”, el sitio usa solo fundidos suaves. El visitante puede cambiarlo con el botón **Animaciones** de la barra superior (se recuerda en su navegador). `?motion=on` en la URL también las activa.
+- Si el sistema operativo pide “movimiento reducido”, el sitio usa solo fundidos suaves. `?motion=on` en la URL fuerza las animaciones en esa visita.
 - Requiere internet para Google Fonts, los íconos Phosphor (unpkg) y el mapa.
-- Lo marcado **[POR CONFIRMAR]** son datos que faltan o hay que validar con el colegio.
 - La versión anterior (una sola página) quedó en `../sitio-v1/`.

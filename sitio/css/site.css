@@ -171,10 +171,6 @@ html:not(.first-visit) .curtain__bar { display: none; }
 .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-500); box-shadow: 0 0 0 0 rgba(241,179,0,.5); }
 .motion-full .pulse-dot { animation: pulse 2.4s ease-out infinite; }
 @keyframes pulse { 70%, 100% { box-shadow: 0 0 0 9px rgba(241,179,0,0); } }
-.motion-toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 0 12px; border-radius: var(--radius-pill); border: 1px solid rgba(200,214,232,.35); background: transparent; cursor: pointer; font: 500 12px/1 var(--font-sans); color: var(--navy-100); transition: transform var(--d-press) var(--ease-out), border-color var(--d-ui) ease; }
-.motion-toggle:active { transform: scale(.97); }
-.motion-toggle__state { font-weight: 700; color: var(--gold-500); }
-.motion-toggle[aria-pressed="false"] .motion-toggle__state { color: var(--navy-100); }
 
 .site-header { color: var(--on-dark); transition: background-color 300ms ease, box-shadow 300ms ease, color 300ms ease; }
 .site-header__row { display: flex; align-items: center; gap: var(--space-4); height: var(--chrome-h); }

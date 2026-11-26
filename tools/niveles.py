@@ -124,7 +124,7 @@ def page(L):
       <div class="sec-head">
         <p class="eyebrow eyebrow--gold" data-reveal>Jornada escolar</p>
         <h2 class="h-sec" id="t-jornada" data-split>Un año en <em>{L["name"]}</em></h2>
-        <p class="lead" data-reveal>Fechas del calendario de Matrículas 2025. <span class="tbc tbc--dark">[POR CONFIRMAR: año lectivo vigente]</span></p>
+        <p class="lead" data-reveal>Fechas del calendario de Matrículas 2027.</p>
       </div>
       <div class="day" data-stagger>
         <div class="day-card" data-reveal><i class="ph-fill ph-clock" aria-hidden="true"></i><small>Horario de clases</small><b>{L["schedule"]}</b></div>
@@ -140,7 +140,7 @@ def page(L):
       <div>
         <p class="eyebrow" data-reveal>Inversión educativa</p>
         <h2 class="h-sec" id="t-inv" data-split>Inversión en <em>{L["name"]}</em></h2>
-        <p class="lead" data-reveal>Montos publicados en Matrículas 2025. <span class="tbc">[POR CONFIRMAR: montos vigentes]</span></p>
+        <p class="lead" data-reveal>Montos publicados en Matrículas 2027.</p>
         <ul class="incl" data-reveal>
           <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Incluye material educativo (pack de libros).</li>
           <li><i class="ph-fill ph-x-circle" aria-hidden="true"></i>No incluye libro de inglés.</li>
