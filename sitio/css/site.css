@@ -143,20 +143,6 @@ html:not(.first-visit) .curtain__bar { display: none; }
 .scroll-progress { position: fixed; inset: 0 0 auto; height: 3px; z-index: 300; pointer-events: none; }
 .scroll-progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--gold-500), var(--red-600)); transform: scaleX(0); transform-origin: left; }
 
-/* Cursor */
-.cursor { display: none; }
-@media (hover: hover) and (pointer: fine) {
-  .has-cursor .cursor { display: block; position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; }
-  .cursor__ring, .cursor__dot { position: fixed; left: 0; top: 0; border-radius: 50%; will-change: transform; }
-  .cursor__dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--red-600); }
-  .cursor__ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; display: grid; place-items: center; }
-  .cursor__ring::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid var(--blue-600); transition: transform 300ms var(--ease-out), background-color 300ms ease, border-color 300ms ease; }
-  .cursor__label { position: relative; font: 700 11px/1 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--navy-900); opacity: 0; transform: scale(.8); transition: opacity 200ms ease, transform 300ms var(--ease-out); }
-  .cursor.is-hover .cursor__ring::before { transform: scale(1.6); border-color: var(--gold-500); }
-  .cursor.is-label .cursor__ring::before { transform: scale(2.2); background: var(--gold-500); border-color: var(--gold-500); }
-  .cursor.is-label .cursor__label { opacity: 1; transform: none; }
-  .cursor.is-label .cursor__dot, .cursor.is-hidden { opacity: 0; }
-}
 
 /* ---------- Chrome: barra superior + header ---------- */
 .chrome { position: fixed; inset: 0 0 auto; z-index: 200; transition: transform 450ms var(--ease-out); }
@@ -441,7 +427,8 @@ a.menu__title:hover { color: var(--gold-500); }
 .phero { position: relative; min-height: 86svh; padding: calc(var(--chrome-h) + 96px) 0 clamp(120px, 14vw, 180px); background: linear-gradient(180deg, var(--blue-600) 0%, var(--navy-900) 72%); color: var(--on-dark); overflow: clip; display: flex; align-items: center; }
 .phero > .container { width: 100%; position: relative; z-index: 2; }
 .phero__grid { display: grid; gap: var(--space-12); align-items: center; }
-@media (min-width: 1024px) { .phero__grid { grid-template-columns: 1.15fr .85fr; } }
+@media (min-width: 1024px) { .phero__grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); } }
+.phero__grid > :first-child { container-type: inline-size; }
 .crumbs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 600 12px/1 var(--font-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--navy-100); margin-bottom: var(--space-6); }
 .crumbs a { color: var(--navy-100); text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; }
 .crumbs a:hover { color: var(--gold-500); }
@@ -521,7 +508,9 @@ a.chip:active { transform: scale(.97); }
 @media (min-width: 1024px) { .family-grid { grid-template-columns: .85fr 1.15fr; align-items: start; } .family-grid__intro { position: sticky; top: 140px; } }
 
 /* ---------- Páginas de nivel ---------- */
-.lv-hero__name { font: 900 clamp(64px, 12vw, 170px)/.85 var(--font-display); color: var(--gold-500); text-transform: uppercase; letter-spacing: -.02em; }
+/* El nombre del nivel nunca supera su columna: así la foto mide igual en Kinder, Primaria y Secundaria.
+   --fit = ancho de la palabra / tamaño de letra (medido con la tipografía display). */
+.lv-hero__name { font: 900 min(clamp(64px, 12vw, 170px), calc(98cqi / var(--fit, 3.7)))/.85 var(--font-display); color: var(--gold-500); text-transform: uppercase; letter-spacing: -.02em; }
 .lv-hero__tagline { font: 700 clamp(22px, 2.6vw, 32px)/1.2 var(--font-display); color: var(--on-dark); margin-top: var(--space-4); }
 .lv-switch { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--space-8); }
 .lv-switch a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: var(--radius-pill); text-decoration: none; font: 600 14px/1 var(--font-sans); color: var(--navy-100); border: 1px solid rgba(255,255,255,.25); transition: transform var(--d-press) var(--ease-out), background-color var(--d-ui) ease, color var(--d-ui) ease; }

@@ -8,19 +8,19 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "sitio"
 
 LEVELS = [
-    dict(key="kinder", name="Kinder", n="01", img="hero-kinder.webp", w=1260, h=625,
+    dict(key="kinder", name="Kinder", fit="3.70", n="01", img="hero-kinder.webp", w=1260, h=625,
          alt="Niñas y niños de Kinder con uniforme, sonriendo y con las manos en alto",
          tagline="Curiosos e inquisitivos",
          lead="Kinder I, II y III. Aprendizaje a través del juego, la exploración y el acompañamiento cercano de docentes y familias.",
          grades="Kinder I, II y III", schedule="8:30 a.m. – 1:00 p.m.", hours="25 horas semanales",
          traits=8, price=410, sticker="Exploramos jugando", form="Kinder"),
-    dict(key="primaria", name="Primaria", n="02", img="hero-primaria.webp", w=1120, h=710,
+    dict(key="primaria", name="Primaria", fit="4.81", n="02", img="hero-primaria.webp", w=1120, h=710,
          alt="Estudiante de primaria y compañero con uniforme, sentados y sonriendo",
          tagline="Aprendices autónomos y reflexivos",
          lead="De 1.º a 6.º grado. Bases sólidas en matemática, comunicación, ciencias, inglés y tecnología, con formación en fe y valores.",
          grades="1.º a 6.º grado", schedule="8:05 a.m. – 1:45 p.m.", hours="35 horas semanales",
          traits=10, price=450, sticker="Hábitos de estudio", form="Primaria"),
-    dict(key="secundaria", name="Secundaria", n="03", img="hero-secundaria.webp", w=920, h=775,
+    dict(key="secundaria", name="Secundaria", fit="6.22", n="03", img="hero-secundaria.webp", w=920, h=775,
          alt="Dos estudiantes de secundaria con uniforme levantando el pulgar",
          tagline="Pensadores críticos y analíticos",
          lead="De 1.º a 5.º año. Pensamiento científico, inglés, finanzas personales y tecnología, con formación en fe y servicio.",
@@ -74,7 +74,7 @@ def page(L):
       <div>
         <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><a href="index.html#niveles">Niveles</a><span aria-hidden="true">/</span><span aria-current="page">{L["name"]}</span></nav>
         <p class="eyebrow eyebrow--gold" data-reveal>Nivel {L["n"]}</p>
-        <h1 class="lv-hero__name" id="t-hero" data-split>{L["name"]}</h1>
+        <h1 class="lv-hero__name" id="t-hero" style="--fit:{L["fit"]}" data-split>{L["name"]}</h1>
         <p class="lv-hero__tagline" data-reveal>{L["tagline"]}</p>
         <p class="lead" data-reveal>{L["lead"]}</p>
         <div class="phero__chips" data-stagger>

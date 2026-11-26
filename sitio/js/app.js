@@ -209,6 +209,46 @@
     });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---------- Scroll fluido con la rueda: inercia ligera, solo movimiento completo y puntero fino ----------
+     Se interpola hacia el destino con un factor por tiempo (igual en 60 y 120 Hz). Teclado, barra de
+     desplazamiento, enlaces internos y gestos táctiles siguen siendo nativos. */
+  if (full() && fine) (function () {
+    var target = window.scrollY, current = target, running = false, lastT = 0;
+    function maxY() { return Math.max(0, document.documentElement.scrollHeight - innerHeight); }
+    function scrollsInside(el, dy) {
+      for (; el && el !== body && el !== html; el = el.parentElement) {
+        var oy = getComputedStyle(el).overflowY;
+        if ((oy === 'auto' || oy === 'scroll') && el.scrollHeight > el.clientHeight + 1) {
+          if (dy > 0 ? el.scrollTop + el.clientHeight < el.scrollHeight - 1 : el.scrollTop > 0) return true;
+        }
+      }
+      return false;
+    }
+    function step(t) {
+      var dt = lastT ? Math.min(t - lastT, 50) : 16.7; lastT = t;
+      target = clamp(target, 0, maxY());
+      current += (target - current) * (1 - Math.pow(1 - 0.12, dt / 16.7));
+      if (Math.abs(target - current) < 0.5) { current = target; running = false; }
+      window.scrollTo(0, current);
+      if (running) requestAnimationFrame(step);
+      else { html.style.scrollBehavior = ''; lastT = 0; }
+    }
+    window.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || e.defaultPrevented || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      if (body.classList.contains('menu-open') || document.querySelector('dialog[open]')) return;
+      var dy = e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1);
+      if (scrollsInside(e.target, dy)) return;
+      e.preventDefault();
+      if (!running) {
+        target = current = window.scrollY;
+        html.style.scrollBehavior = 'auto'; // sin esto, scroll-behavior: smooth animaría cada paso
+        running = true; requestAnimationFrame(step);
+      }
+      target = clamp(target + dy, 0, maxY());
+    }, { passive: false });
+    window.addEventListener('scroll', function () { if (!running) target = current = window.scrollY; }, { passive: true });
+  })();
   var rT;
   window.addEventListener('resize', function () {
     clearTimeout(rT);
@@ -415,7 +455,7 @@
     })(0);
   })();
 
-  /* ---------- Tilt 3D sutil, botones magnéticos, cursor con etiqueta ---------- */
+  /* ---------- Tilt 3D sutil y botones magnéticos ---------- */
   if (fine && full()) {
     $$('.lvl').forEach(function (card) {
       card.addEventListener('pointermove', function (e) {
@@ -433,29 +473,6 @@
       });
       b.addEventListener('pointerleave', function () { b.style.setProperty('--mx', '0px'); b.style.setProperty('--my', '0px'); });
     });
-    var cursor = $('.cursor');
-    if (cursor) {
-      html.classList.add('has-cursor');
-      var ring = $('.cursor__ring', cursor), dot = $('.cursor__dot', cursor), label = $('.cursor__label', cursor);
-      var mx = -100, my = -100, rx = -100, ry = -100;
-      window.addEventListener('pointermove', function (e) {
-        mx = e.clientX; my = e.clientY;
-        dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
-        cursor.classList.remove('is-hidden');
-      }, { passive: true });
-      document.addEventListener('pointerleave', function () { cursor.classList.add('is-hidden'); });
-      document.addEventListener('pointerover', function (e) {
-        var lab = e.target.closest('[data-cursor]');
-        cursor.classList.toggle('is-label', !!lab);
-        if (lab) label.textContent = lab.getAttribute('data-cursor');
-        cursor.classList.toggle('is-hover', !lab && !!e.target.closest('a, button, summary, label, select, input, textarea, [role="button"]'));
-      });
-      (function loop() {
-        rx += (mx - rx) * 0.2; ry += (my - ry) * 0.2;
-        ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
-        requestAnimationFrame(loop);
-      })();
-    }
   }
 
   /* ---------- Interruptor segmentado con clip-path + cambio de panel con desenfoque ---------- */
